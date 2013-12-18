@@ -22,7 +22,7 @@ class MicrovideosController < ApplicationController
 
   private
     def microvideo_params
-      params.require(:microvideo).permit(:content)
+      params.require(:microvideo).permit(:content, :titulo, :comentario)
     end
 
     def correct_user
@@ -33,8 +33,6 @@ class MicrovideosController < ApplicationController
 end
 
   private
-
-   
 
     def correct_user
       @micropost = current_user.microposts.find_by(id: params[:id])
