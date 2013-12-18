@@ -26,7 +26,11 @@ body {
 
 section {
   overflow: auto;
-}
+} 
+
+.panel, .panel-heading, .panel-body, .form-group {
+    background-color: transparent;
+  }
 
 textarea {
   resize: vertical;
@@ -58,6 +62,15 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 3em;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #3366FF;
+}
+h7 {
+  font-size: 4em;
+  font-weight: bold;
+  line-height: 1;
   letter-spacing: 2px;
   margin-bottom: 30px;
   text-align: center;
@@ -112,6 +125,7 @@ h5 {
 p {
   font-size: 1.1em;
   line-height: 1.7em;
+  color: white;
 }
 
 
@@ -128,6 +142,7 @@ p {
   padding-top: 9px;
   font-weight: bold;
   line-height: 1;
+  font-color: white;
   &:hover {
     color: white;
     text-decoration: none;
@@ -138,6 +153,11 @@ p {
     background-color: #3366FF;
     background-image: none;
     background-size: cover;
+    li {
+      font-weight: bold;
+      font-color: white;
+      text-decoration: none;
+    }
   }
 }
 
