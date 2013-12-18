@@ -44,7 +44,7 @@ describe "Authentication" do
     describe "for non-signed-in usuarios" do
       let(:usuario) { FactoryGirl.create(:usuario) }
 
-      describe "in the usuarios controller" do
+      describe "in the usuers controller" do
 
         describe "visiting the edit page" do
           before { visit edit_usuario_path(usuario) }
@@ -77,6 +77,17 @@ describe "Authentication" do
           before { visit followers_usuario_path(usuario) }
           it { should have_title('Sign in') }
         end
+
+        describe "visiting the following page" do
+          before { visit following_user_path(user) }
+          it { should have_title('Sign in') }
+        end
+
+        describe "visiting the followers page" do
+          before { visit followers_user_path(user) }
+          it { should have_title('Sign in') }
+        end
+        
       end
     end
   end

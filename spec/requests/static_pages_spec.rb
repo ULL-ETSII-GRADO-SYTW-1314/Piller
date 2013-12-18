@@ -43,6 +43,34 @@ describe "Static pages" do
     it { should have_content('Home') }
     it { should have_title(full_title('Home')) }
     it { should_not have_title('Proyecto Piller Home') }
+
+    describe "for signed-in users" do
+      let(:usuario) { FactoryGirl.create(:usuario) }
+      before do
+        FactoryGirl.create(:micropost, usuario: usuario, content: "Lorem")
+        FactoryGirl.create(:micropost, usuario: usuario, content: "Ipsum")
+        sign_in usuario
+        visit root_path
+      end
+
+      it "should render the user's feed" do
+        usuario.feed.each do |item|
+          expect(page).to have_selector("li##{item.id}", text: item.content)
+        end
+      end
+
+      describe "follower/following counts" do
+        let(:other_user) { FactoryGirl.create(:usuario) }
+        before do
+          other_user.follow!(usuario)
+          visit root_path
+        end
+
+        it { should have_link("0 following", href: following_usuario_path(usuario)) }
+        it { should have_link("1 followers", href: followers_usuario_path(usuario)) }
+      end
+    end
+
   end
 
   describe "Help page" do

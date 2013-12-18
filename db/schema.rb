@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131215201521) do
+ActiveRecord::Schema.define(version: 20131218151849) do
 
   create_table "microvideos", force: true do |t|
     t.string   "content"
@@ -23,7 +23,6 @@ ActiveRecord::Schema.define(version: 20131215201521) do
   end
 
   add_index "microvideos", ["usuario_id", "created_at"], name: "index_microvideos_on_usuario_id_and_created_at"
-
 
   create_table "relationships", force: true do |t|
     t.integer  "follower_id"

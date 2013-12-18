@@ -1,14 +1,18 @@
 class UsuariosController < ApplicationController
-  before_action :signed_in_user, only: [:index, :edit, :update, :destroy]
+  before_action :signed_in_user,
+                only: [:index, :edit, :update, :destroy, :following, :followers]
   before_action :correct_user,   only: [:edit, :update]
   before_action :admin_user,     only: :destroy
+  
   def new
   	@usuario = Usuario.new
   end
+  
   def show
     @usuario = Usuario.find(params[:id])
     @microvideos = @usuario.microvideos.paginate(page: params[:page])
   end
+  
   def create
     @usuario = Usuario.new(user_params)    # Not the final implementation!
     if @usuario.save
@@ -20,7 +24,7 @@ class UsuariosController < ApplicationController
     end
   end
 
-   def destroy
+  def destroy
     Usuario.find(params[:id]).destroy
     flash[:success] = "Usuario destroyed."
     redirect_to usuarios_path
@@ -30,7 +34,7 @@ class UsuariosController < ApplicationController
     @usuario = Usuario.find(params[:id])
   end
 
-   def update
+  def update
     @usuario = Usuario.find(params[:id])
     if @usuario.update_attributes(user_params)
       flash[:success] = "Profile updated"
@@ -41,7 +45,7 @@ class UsuariosController < ApplicationController
     end
   end
 
-   def index
+  def index
     @usuarios = Usuario.paginate(page: params[:page])
   end
 
