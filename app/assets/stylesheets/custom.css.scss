@@ -128,6 +128,7 @@ p {
   padding-top: 9px;
   font-weight: bold;
   line-height: 1;
+  font-color: white;
   &:hover {
     color: white;
     text-decoration: none;
@@ -138,6 +139,11 @@ p {
     background-color: #3366FF;
     background-image: none;
     background-size: cover;
+    li {
+      font-weight: bold;
+      font-color: white;
+      text-decoration: none;
+    }
   }
 }
 
