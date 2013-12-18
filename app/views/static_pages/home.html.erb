@@ -9,24 +9,23 @@
         <%= render 'shared/microvideo_form' %>
       </section>
     </aside>
-  </div>
-  <div class="span8">
+    <div class="span8">
       <h3>Pillers</h3>
       <%= render 'shared/feed' %>
     </div>
-  </div>
+</div> 
 <% else %>
  </div>
   <div class="container-full">
     <div class="row">
-        <div class="col-lg-12">
-          <h1>Bienvenido a Piller</h1>
+        <div class="col-lg-12 text-center v-center">
+          <h9>Bienvenido a Piller</h9>
           <h2>La Red Social donde ampliarás tu conocimiento en comunidad</h2>
           <%= link_to "Regístrate", signup_path,
                                 class: "btn btn-large btn-primary" %>
+          <br><br><br><br><br>
         </div>
     </div>
   </div>
 
-  <%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
 <% end %>

@@ -11,7 +11,8 @@ class Microvideo < ActiveRecord::Base
   							        :length => { maximum: 140 },
   							        :format  => { :with => url_regex }
 
-  	validates :titulo,      :length => { maximum: 100 }  						    
+  	validates :titulo,   :presence => true,
+                         :length => { maximum: 100 }  						    
   	validates :comentario, length: { maximum: 140 }
 	
 	def self.from_users_followed_by(user)
