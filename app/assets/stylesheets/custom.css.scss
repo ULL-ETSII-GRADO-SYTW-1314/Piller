@@ -38,6 +38,16 @@ textarea {
   h1 {
     margin-bottom: 10px;
   }
+.container-full {
+  margin: 0 auto;
+  width: 100%;
+  min-height:100%;
+  background-color:#110022;
+  background-image:url(https://lh4.googleusercontent.com/hVUEqahG8CpqTY6BK4muKohoNZaVB_KUkUnI9ZEjJA=w1086-h611-no);
+  background-size: cover;
+  color:#eee;
+  overflow:hidden;
+  } 
 }
 
 /* typography */
