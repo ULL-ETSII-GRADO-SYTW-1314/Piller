@@ -24,7 +24,6 @@ ActiveRecord::Schema.define(version: 20131215201521) do
 
   add_index "microvideos", ["usuario_id", "created_at"], name: "index_microvideos_on_usuario_id_and_created_at"
 
-
   create_table "relationships", force: true do |t|
     t.integer  "follower_id"
     t.integer  "followed_id"

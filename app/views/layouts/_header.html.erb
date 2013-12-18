@@ -5,21 +5,21 @@
       <nav>
         <ul class="nav pull-right">
           <li><%= link_to "Home", root_path %></li>
-          <li><%= link_to "Help", help_path %></li>
-          <li><%= link_to "About", about_path %></li>
+          <li><%= link_to "Ayuda", help_path %></li>
+          <li><%= link_to "Quienes Somos", about_path %></li>
           <% if signed_in? %>
             <li><%= link_to "Usuarios", usuarios_path %></li>
-                <li><%= link_to "Profile", current_usuario %></li>
-                <li><%= link_to "Settings", edit_usuario_path(current_usuario) %></li>
+                <li><%= link_to "Perfil", current_usuario %></li>
+                <li><%=link_to "Configuración", edit_usuario_path(current_usuario) %></li>
                 <li class="divider"></li>
                 <li>
-                  <%= link_to "Sign out", signout_path, method: "delete" %>
+                  <%= link_to "Salir", signout_path, method: "delete" %>
                 </li>
               
             </li>
           <% else %>
             <li><%= link_to "Registrate", signup_path %></li>
-            <li><%= link_to "Acceder", signin_path %></li>
+            <li><%= link_to "Entra", signin_path %></li>
           <% end %>
         </ul>
       </nav>
