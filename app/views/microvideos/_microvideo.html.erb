@@ -6,7 +6,7 @@
     Publicado: <%= time_ago_in_words(microvideo.created_at) %> ago.
   </span>
   <% if current_usuario?(microvideo.usuario) %>
-    <%= link_to "delete", microvideo, method: :delete,
+    <%= link_to "Borrar", microvideo, method: :delete,
                                      data: { confirm: "¿Estás seguro?" },
                                      title: microvideo.content %>
   <% end %>
