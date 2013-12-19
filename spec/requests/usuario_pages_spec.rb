@@ -58,19 +58,14 @@ describe "Usuario pages" do
 
         it "should increment the followed user count" do
           expect do
-            click_button "Follow"
+            click_button "Seguir"
           end.to change(usuario.followed_users, :count).by(1)
         end
 
         it "should increment the other user's followers count" do
           expect do
-            click_button "Follow"
+            click_button "Seguir"
           end.to change(other_usuario.followers, :count).by(1)
-        end
-
-        describe "toggling the button" do
-          before { click_button "Follow" }
-          it { should have_xpath("//input[@value='Unfollow']") }
         end
       end
 
@@ -82,19 +77,14 @@ describe "Usuario pages" do
 
         it "should decrement the followed user count" do
           expect do
-            click_button "Unfollow"
+            click_button "Dejar de Seguir"
           end.to change(usuario.followed_users, :count).by(-1)
         end
 
         it "should decrement the other user's followers count" do
           expect do
-            click_button "Unfollow"
+            click_button "Dejar de Seguir"
           end.to change(other_usuario.followers, :count).by(-1)
-        end
-
-        describe "toggling the button" do
-          before { click_button "Unfollow" }
-          it { should have_xpath("//input[@value='Follow']") }
         end
       end
     end

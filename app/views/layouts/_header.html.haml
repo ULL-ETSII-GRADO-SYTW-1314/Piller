@@ -1,0 +1,17 @@
+%header.navbar.navbar-fixed-top.navbar-inverse
+  .navbar-inner
+    .container
+      = link_to "Piller", root_path, id: "logo"
+      %nav
+        %ul.nav.pull-right
+          %li= link_to "Inicio", root_path
+          - if signed_in?
+            %li= link_to "Usuarios", usuarios_path
+            %li= link_to "Perfil", current_usuario
+            %li= link_to "Configuracion", edit_usuario_path(current_usuario)
+            %li.divider
+            %li
+              = link_to "Salir", signout_path, method: "delete"
+          - else
+            %li= link_to "Registrate", signup_path
+            %li= link_to "Entra", signin_path

@@ -91,6 +91,8 @@ GEM
       childprocess (>= 0.2.3)
       guard (>= 1.1)
       spork (>= 0.8.4)
+    haml (4.0.4)
+      tilt
     hike (1.2.3)
     i18n (0.6.9)
     jbuilder (1.0.2)
@@ -112,6 +114,7 @@ GEM
     mini_portile (0.5.2)
     minitest (4.7.5)
     multi_json (1.8.2)
+    multi_test (0.0.2)
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
     pg (0.15.1)
@@ -218,6 +221,7 @@ DEPENDENCIES
   faker (= 1.1.2)
   gravatar_image_tag (= 1.0.0.pre2)
   guard-spork (= 1.5.0)
+  haml
   jbuilder (= 1.0.2)
   jquery-rails (= 3.0.4)
   pg (= 0.15.1)

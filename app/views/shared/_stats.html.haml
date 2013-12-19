@@ -1,0 +1,10 @@
+- @usuario ||= current_usuario
+.stats
+  %a{:href => following_usuario_path(@usuario)}
+    %strong#following.stat
+      = @usuario.followed_users.count
+    Siguiendo
+  %a{:href => followers_usuario_path(@usuario)}
+    %strong#followers.stat
+      = @usuario.followers.count
+    Seguidores

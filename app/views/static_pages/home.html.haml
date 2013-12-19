@@ -1,0 +1,26 @@
+- provide(:title, 'Inicio')
+- if signed_in?
+  .row
+    %aside.span4
+      %section
+        = render 'shared/usuario_info'
+      %section
+        = render 'shared/stats'
+      %section
+        = render 'shared/microvideo_form'
+    .span4
+      %h3 Pillers
+      = render 'shared/feed'
+- else
+  .container-full
+    .row
+      .col-lg-12.text-center.v-center
+        %h9 Bienvenido a Piller
+        %h2 La Red Social donde ampliarás tu conocimiento en comunidad
+        = link_to "Regístrate", signup_path, |
+          class: "btn btn-large btn-primary" |
+        %br
+          %br
+            %br
+              %br
+                %br

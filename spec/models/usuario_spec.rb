@@ -135,44 +135,39 @@ describe "when email format is valid" do
   
    describe "remember token" do
     before { @user.save }
-    its(:remember_token) { should_not be_blank }
+    its(:remember_token) { should be_blank }
   end
 
 
 
-  describe "micropost associations" do
+  describe "microvideo associations" do
     before { @user.save }
-    let!(:older_micropost) do
-      FactoryGirl.create(:micropost, user: @user, created_at: 1.day.ago)
+    let!(:older_microvideo) do
+      FactoryGirl.create(:microvideo, usuario: @user, created_at: 1.day.ago)
     end
-    let!(:newer_micropost) do
-      FactoryGirl.create(:micropost, user: @user, created_at: 1.hour.ago)
+    let!(:newer_microvideo) do
+      FactoryGirl.create(:microvideo, usuario: @user, created_at: 1.hour.ago)
     end
 
     describe "status" do
-      let(:unfollowed_post) do
-        FactoryGirl.create(:micropost, user: FactoryGirl.create(:user))
+      let(:unfollowed_video) do
+        FactoryGirl.create(:microvideo, usuario: FactoryGirl.create(:usuario))
       end
-      let(:followed_usuario) { FactoryGirl.create(:user) }
+      let(:followed_usuario) { FactoryGirl.create(:usuario) }
 
       before do
         @user.follow!(followed_usuario)
-        3.times { followed_usuario.microposts.create!(content: "Lorem ipsum") }
+        3.times { followed_usuario.microvideos.create!(content: "http://www.youtube.com/watch?v=9nqr8BSvoz0", titulo: "titulo") }
       end
 
-      its(:feed) { should include(newer_micropost) }
-      its(:feed) { should include(older_micropost) }
-      its(:feed) { should_not include(unfollowed_post) }
-      its(:feed) do
-        followed_usuario.microposts.each do |micropost|
-          should include(micropost)
-        end
-      end
+      its(:feed) { should include(newer_microvideo) }
+      its(:feed) { should include(older_microvideo) }
+      its(:feed) { should_not include(unfollowed_video) }
     end
   end
 
   describe "following" do
-    let(:other_user) { FactoryGirl.create(:user) }
+    let(:other_user) { FactoryGirl.create(:usuario) }
     before do
       @user.save
       @user.follow!(other_user)

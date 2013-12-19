@@ -1,0 +1,10 @@
+%li
+  %span.content= microvideo.titulo
+  %iframe{:allowfullscreen => "", :frameborder => "0", :height => "390", :src => "http://www.youtube.com/embed/#{microvideo.content.split('=').last}?end=60&version=3", :width => "640"}
+  %span.content= microvideo.comentario
+  %span.timestamp
+    Publicado: #{time_ago_in_words(microvideo.created_at)} ago.
+  - if current_usuario?(microvideo.usuario)
+    = link_to "Borrar", microvideo, method: :delete, |
+      data: { confirm: "¿Estás seguro?" },           |
+      title: microvideo.content                      |

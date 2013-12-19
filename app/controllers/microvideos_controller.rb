@@ -1,9 +1,6 @@
 class MicrovideosController < ApplicationController
   before_action :signed_in_user, only: [:create, :destroy]
 
-  def destroy
-  end
-
   def create
     @microvideo = current_usuario.microvideos.build(microvideo_params)
     if @microvideo.save
