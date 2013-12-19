@@ -49,9 +49,6 @@ describe "Usuario pages" do
   describe "profile page" do
     let(:usuario) { FactoryGirl.create(:usuario) }
 
-
-
-
     describe "follow/unfollow buttons" do
       let(:other_usuario) { FactoryGirl.create(:usuario) }
       before { sign_in usuario }

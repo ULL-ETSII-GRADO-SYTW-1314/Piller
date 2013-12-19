@@ -12,7 +12,7 @@
       <% if @usuarios.any? %>
         <div class="user_avatars">
           <% @usuarios.each do |usuario| %>
-            <%= link_to gravatar_for(usuario, size: 10), usuario %>
+              <%= link_to gravatar_for(usuario, size: 10), usuario %>
           <% end %>
         </div>
       <% end %>

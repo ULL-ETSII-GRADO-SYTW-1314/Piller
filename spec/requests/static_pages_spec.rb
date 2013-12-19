@@ -1,12 +1,12 @@
 =begin
 require 'spec_helper'
 	describe "Static pages" do
-		describe "Home page" do
-			before { visit home_path }
+		describe "Inicio page" do
+			before { visit Inicio_path }
 
     		it { should have_selector('h1',    text: 'Piller') }
     		it { should have_selector('title', text: full_title('')) }
-    		it { should_not have_selector 'title', text: 'Proyecto SYTW Piller | Home' }
+    		it { should_not have_selector 'title', text: 'Proyecto SYTW Piller | Inicio' }
 			
 		end
 		describe "Help page" do
@@ -37,12 +37,12 @@ describe "Static pages" do
 
   subject { page }
 
-  describe "Home page" do
+  describe "Inicio page" do
     before { visit root_path }
 
-    it { should have_content('Home') }
-    it { should have_title(full_title('Home')) }
-    it { should_not have_title('Proyecto Piller Home') }
+    it { should have_content('Inicio') }
+    it { should have_title(full_title('Inicio')) }
+    it { should_not have_title('Proyecto Piller Inicio') }
 
     describe "for signed-in users" do
       let(:usuario) { FactoryGirl.create(:usuario) }
