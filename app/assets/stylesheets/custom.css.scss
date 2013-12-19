@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  padding-top: 60px;
+  padding-top: 100px;
   background: url(fondo.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -67,6 +67,9 @@ h1 {
   text-align: center;
   color: #3366FF;
 }
+h3 {
+    color: white;
+}
 h7 {
   font-size: 4em;
   font-weight: bold;
@@ -83,7 +86,7 @@ h9 {
   letter-spacing: 2px;
   margin-bottom: 30px;
   text-align: center;
-  color: #3366FF;
+  color: white;
 }
 h2 {
   font-size: 1.7em;
@@ -93,7 +96,7 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: #3399FF;
+  color: gray;
 }
 
 h6 {
@@ -150,8 +153,11 @@ p {
 }
 .navbar {
   .navbar-inner {
-    background-color: #4000FF;
+    background-color: black;
     background-image: none;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
     li {
       font-weight: bold;
