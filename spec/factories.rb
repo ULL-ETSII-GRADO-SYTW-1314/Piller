@@ -12,8 +12,9 @@ FactoryGirl.define do
   end
 
   factory :microvideo do
-   content "http://www.youtube.com/watch?v=xxxxxxxxxxx"
+    content "http://www.youtube.com/watch?v=xxxxxxxxxxx"
     titulo "Lorem ipsum"
+    comentario "Comentarios..."
     usuario
   end
 end
