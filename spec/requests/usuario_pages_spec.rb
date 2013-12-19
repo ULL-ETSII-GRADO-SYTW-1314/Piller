@@ -16,23 +16,26 @@ describe "Usuario pages" do
     before { visit edit_usuario_path(usuario) }
 
     describe "page" do
-      it { should have_content("Update your profile") }
-      it { should have_title("Edit usuario") }
-      it { should have_link('change', href: 'http://gravatar.com/emails') }
+      it { should have_content("Actualiza tu perfil") }
+      it { should have_title("Editar perfil") }
+      it { should have_link('Cambiar', href: 'http://gravatar.com/emails') }
     end
 
     describe "with invalid information" do
-      before { click_button "Save changes" }
-
+      before { click_button "Guardar" }
       it { should have_content('error') }
     end
+
     describe "with valid information" do
+      let(:new_name)  { "New Name" }
+      let(:new_email) { "new@example.com" }
+
       before do
-        fill_in "name",             with: "Manolo"
-        fill_in "email",            with: "Manolo@example.com"
-        fill_in "password",         with: "foobar"
-        fill_in "confirm password", with: "foobar"
-        click_button "Save changes"
+        fill_in "Nombre",             with: new_name
+        fill_in "Email",              with: new_email
+        fill_in "Password",           with: usuario.password
+        fill_in "Confirm Password",   with: usuario.password
+        click_button "Guardar"
       end
 
       it { should have_title(new_name) }
