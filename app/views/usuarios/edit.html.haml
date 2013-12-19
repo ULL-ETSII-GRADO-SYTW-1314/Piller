@@ -1,0 +1,17 @@
+- provide(:title, "Editar perfil")
+%h1 Actualiza tu perfil
+.row
+  .span6.offset3
+    = form_for(@usuario) do |f|
+      = render 'shared/error_messages', object: f.object
+      = f.label :name, "Nombre"
+      = f.text_field :name, :placeholder =>"Introduce tu Nombre"
+      = f.label :email, "Email"
+      = f.text_field :email, :placeholder =>"Introduce tu Email"
+      = f.label :password, "Password"
+      = f.password_field :password, :placeholder =>"Introduce tu Contraseña"
+      = f.label :password_confirmation, "Confirm Password"
+      = f.password_field :password_confirmation, :placeholder =>"Repite tu Contraseña"
+      = f.submit "Guardar", class: "btn btn-large btn-primary"
+    = gravatar_for @usuario
+    %a{:href => "http://gravatar.com/emails"} Cambiar

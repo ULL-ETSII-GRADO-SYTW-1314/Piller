@@ -1,0 +1,16 @@
+%li{:id => feed_item.id}
+  = link_to gravatar_for(feed_item.usuario, size: 10), feed_item.usuario
+  %span.user
+    = link_to feed_item.usuario.name, feed_item.usuario
+  %span.content= feed_item.titulo
+  %br
+    %br
+      %br
+        %iframe{:allowfullscreen => "", :frameborder => "0", :height => "390", :src => "http://www.youtube.com/embed/#{feed_item.content.split('=').last}?end=60&version=3", :width => "640"}
+        %span.timestamp
+          %span.content= feed_item.comentario
+          Publicado: #{time_ago_in_words(feed_item.created_at)} ago.
+        - if current_usuario?(feed_item.usuario)
+          = link_to "Borrar", feed_item, method: :delete, |
+            data: { confirm: "¿Estás seguro?" },          |
+            title: feed_item.content                      |

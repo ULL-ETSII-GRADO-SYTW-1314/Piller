@@ -1,0 +1,12 @@
+- provide(:title, "Acceder")
+%h1 Acceder
+.row
+  .span6.offset3
+    = form_for(:session, url: sessions_path) do |f|
+      = f.label :email
+      = f.text_field :email, :placeholder => "Introduce tu Email"
+      = f.label :password
+      = f.password_field :password, :placeholder => "Introduce tu Contraseña"
+      = f.submit "Entrar", class: "btn btn-large btn-primary"
+    %p
+      ¿No estás registrado? #{link_to "Regístrate", signup_path}

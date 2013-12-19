@@ -1,0 +1,13 @@
+- provide(:title, 'Contacto')
+%h1 Contacta con PILLER
+.row
+  .col-md-12
+    .panel.panel-default
+      .panel-heading
+        %h3 Contacta con PILLER
+      .panel-body
+        .form-group
+          .controls
+            %input.form-control{:placeholder => "Introduce tu Nombre", :type => "text"}
+              %input.form-control.input-lg{:placeholder => "Introduce tu Email", :title => "Don't worry. We hate spam, and will not share your email with anyone.", :type => "text"}
+                %textarea.form-control{:placeholder => "Introduce tu Comentario"}

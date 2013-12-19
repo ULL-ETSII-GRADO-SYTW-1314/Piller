@@ -1,0 +1,7 @@
+= link_to gravatar_for(current_usuario, size: 10), current_usuario
+%h1
+  = current_usuario.name
+%span
+  = link_to "Ver mi Perfil", current_usuario
+%span
+  = pluralize(current_usuario.microvideos.count, "microvideo")
