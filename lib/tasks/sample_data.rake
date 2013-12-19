@@ -26,7 +26,7 @@ end
 
 def make_microvideos
   usuario = Usuario.all(limit: 6)
-  50.times do
+  5.times do
     titulo = " Titulo "
     content = "http://www.youtube.com/watch?v=9nqr8BSvoz0"
     comentario = " Comentarios... "

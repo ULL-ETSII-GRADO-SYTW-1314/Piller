@@ -47,16 +47,10 @@ describe "Static pages" do
     describe "for signed-in users" do
       let(:usuario) { FactoryGirl.create(:usuario) }
       before do
-        FactoryGirl.create(:micropost, usuario: usuario, content: "Lorem")
-        FactoryGirl.create(:micropost, usuario: usuario, content: "Ipsum")
+        FactoryGirl.create(:microvideo, usuario: usuario, content: "http://www.youtube.com/watch?v=9nqr8BSvoz0")
+        FactoryGirl.create(:microvideo, usuario: usuario, content: "http://www.youtube.com/watch?v=xyzxyzxyzz0")
         sign_in usuario
         visit root_path
-      end
-
-      it "should render the user's feed" do
-        usuario.feed.each do |item|
-          expect(page).to have_selector("li##{item.id}", text: item.content)
-        end
       end
 
       describe "follower/following counts" do
@@ -70,14 +64,13 @@ describe "Static pages" do
         it { should have_link("1 followers", href: followers_usuario_path(usuario)) }
       end
     end
-
   end
 
   describe "Help page" do
     before { visit help_path }
 
-    it { should have_content('Help') }
-    it { should have_title(full_title('Help')) }
+    it { should have_content('Pagina de ayuda') }
+    it { should have_title(full_title('Ayuda')) }
   end
 
   describe "About page" do
@@ -90,7 +83,7 @@ describe "Static pages" do
   describe "Contact page" do
     before { visit contact_path }
 
-    it { should have_content('Contact') }
-    it { should have_title(full_title('Contact')) }
+    it { should have_content('Contacta con PILLER') }
+    it { should have_title(full_title('Contacto')) }
   end
 end

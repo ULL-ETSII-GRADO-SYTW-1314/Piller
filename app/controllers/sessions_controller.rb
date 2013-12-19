@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
        sign_in usuario
        redirect_to usuario
     else
-      flash[:error] = 'Invalid email/password combination' # Not quite right!
+      flash[:error] = 'Email o Password no validos.' # Not quite right!
       render 'new'
     end
   end

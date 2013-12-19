@@ -12,7 +12,7 @@ class UsuariosController < ApplicationController
     @usuario = Usuario.find(params[:id])
     @microvideos = @usuario.microvideos.paginate(page: params[:page])
   end
-  
+
   def create
     @usuario = Usuario.new(user_params)    # Not the final implementation!
     if @usuario.save
@@ -66,8 +66,7 @@ class UsuariosController < ApplicationController
   private
 
     def user_params
-      params.require(:usuario).permit(:name, :email, :password,
-                                   :password_confirmation)
+      params.require(:usuario).permit(:name, :email, :password, :password_confirmation)
     end
 
     # Before filters

@@ -1,5 +1,5 @@
 def full_title(page_title)
-  base_title = "Piller"
+  base_title = "PILLER"
   if page_title.empty?
     base_title
   else
@@ -24,13 +24,13 @@ def sign_in(usuario)
   fill_in "Email",    with: usuario.email
   fill_in "Password", with: usuario.password
   click_button "Acceder"
-  # Sign in when not using Capybara as well.
+  # Acceder when not using Capybara as well.
   cookies[:remember_token] = usuario.remember_token
 end
 
 def sign_in(usuario, options={})
   if options[:no_capybara]
-    # Sign in when not using Capybara.
+    # Acceder when not using Capybara.
     remember_token = Usuario.new_remember_token
     cookies[:remember_token] = remember_token
     usuario.update_attribute(:remember_token, Usuario.encrypt(remember_token))
@@ -38,6 +38,6 @@ def sign_in(usuario, options={})
     visit signin_path
     fill_in "Email",    with: usuario.email
     fill_in "Password", with: usuario.password
-    click_button "Sign in"
+    click_button "Entrar"
   end
 end

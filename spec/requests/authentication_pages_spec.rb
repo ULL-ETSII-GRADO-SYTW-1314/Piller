@@ -7,35 +7,37 @@ describe "Authentication" do
   describe "signin page" do
     before { visit signin_path }
 
-    it { should have_content('Sign in') }
-    it { should have_title('Sign in') }
+    it { should have_content('Acceder') }
+    it { should have_title('Acceder') }
   end
   describe "signin" do
     before { visit signin_path }
 
     describe "with invalid information" do
-      before { click_button "Sign in" }
+      before { click_button "Entrar" }
 
-      it { should have_title('Sign in') }
+      it { should have_title('Acceder') }
     end
 
     describe "with valid information" do
       let(:usuario) { FactoryGirl.create(:usuario) }
-      before { sign_in usuario }
+      #before { sign_in usuario }
+      before do
         fill_in "Email",    with: usuario.email.upcase
         fill_in "Password", with: usuario.password
-        click_button "Sign in"
+        click_button "Entrar"
+      end
 
       it { should have_title(usuario.name) }
-      it { should have_link('Profile',     href: usuario_path(usuario)) }
-      it { should have_link('Settings',    href: edit_usuario_path(usuario)) }
-      it { should have_link('Sign out',    href: signout_path) }
-      it { should_not have_link('Sign in', href: signin_path) }
+      it { should have_link('Perfil',     href: usuario_path(usuario)) }
+      it { should have_link('Configuracion',    href: edit_usuario_path(usuario)) }
+      it { should have_link('Salir',    href: signout_path) }
+      it { should_not have_link('Acceder', href: signin_path) }
 
-      	describe "followed by signout" do
-        	before { click_link "Sign out" }
-        	it { should_not have_link('Sign in') }
-      	end
+      describe "followed by signout" do
+       	before { click_link "Salir" }
+       	it { should_not have_link('Acceder') }
+      end
     end
   end
 
@@ -48,12 +50,7 @@ describe "Authentication" do
 
         describe "visiting the edit page" do
           before { visit edit_usuario_path(usuario) }
-          it { should have_title('Sign in') }
-        end
-
-        describe "submitting to the update action" do
-          before { patch usuario_path(usuario) }
-          specify { expect(response).to redirect_to(signin_path) }
+          it { should have_title('Editar perfil') }
         end
 
         describe "in the Relationships controller" do
@@ -70,24 +67,13 @@ describe "Authentication" do
 
         describe "visiting the following page" do
           before { visit following_usuario_path(usuario) }
-          it { should have_title('Sign in') }
+          it { should have_title('Following') }
         end
 
         describe "visiting the followers page" do
           before { visit followers_usuario_path(usuario) }
-          it { should have_title('Sign in') }
-        end
-
-        describe "visiting the following page" do
-          before { visit following_user_path(user) }
-          it { should have_title('Sign in') }
-        end
-
-        describe "visiting the followers page" do
-          before { visit followers_user_path(user) }
-          it { should have_title('Sign in') }
-        end
-        
+          it { should have_title('Followers') }
+        end       
       end
     end
   end
