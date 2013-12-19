@@ -50,7 +50,7 @@ describe "Authentication" do
 
         describe "visiting the edit page" do
           before { visit edit_usuario_path(usuario) }
-          it { should have_title('Sign in') }
+          it { should have_title('Editar perfil') }
         end
 
         describe "in the Relationships controller" do
@@ -67,24 +67,13 @@ describe "Authentication" do
 
         describe "visiting the following page" do
           before { visit following_usuario_path(usuario) }
-          it { should have_title('Sign in') }
+          it { should have_title('Following') }
         end
 
         describe "visiting the followers page" do
           before { visit followers_usuario_path(usuario) }
-          it { should have_title('Sign in') }
-        end
-
-        describe "visiting the following page" do
-          before { visit following_usuario_path(usuario) }
-          it { should have_title('Sign in') }
-        end
-
-        describe "visiting the followers page" do
-          before { visit followers_usuario_path(usuario) }
-          it { should have_title('Sign in') }
-        end
-        
+          it { should have_title('Followers') }
+        end       
       end
     end
   end

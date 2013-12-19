@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-<%= form_for(current_usuario.relationships.find_by(followed_id: @usuario),
-             html: { method: :delete },
-             remote: true) do |f| %>
-  <%= f.submit "Unfollow", class: "btn btn-large" %>
-=======
 <%= form_for(current_usuario.relationships.find_by(followed_id: @usuario), 
 												   html: { method: :delete }, remote: true) do |f| %>
   <%= f.submit "Dejar de Seguir", class: "btn btn-large" %>
->>>>>>> 43384a9d11fab2c091f4dd8e8400eb37fe3b1b73
 <% end %>
