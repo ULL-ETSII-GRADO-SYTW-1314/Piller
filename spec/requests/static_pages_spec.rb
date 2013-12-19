@@ -1,12 +1,12 @@
 =begin
 require 'spec_helper'
 	describe "Static pages" do
-		describe "Home page" do
-			before { visit home_path }
+		describe "Inicio page" do
+			before { visit Inicio_path }
 
     		it { should have_selector('h1',    text: 'Piller') }
     		it { should have_selector('title', text: full_title('')) }
-    		it { should_not have_selector 'title', text: 'Proyecto SYTW Piller | Home' }
+    		it { should_not have_selector 'title', text: 'Proyecto SYTW Piller | Inicio' }
 			
 		end
 		describe "Help page" do
@@ -37,19 +37,40 @@ describe "Static pages" do
 
   subject { page }
 
-  describe "Home page" do
+  describe "Inicio page" do
     before { visit root_path }
 
-    it { should have_content('Home') }
-    it { should have_title(full_title('Home')) }
-    it { should_not have_title('Proyecto Piller Home') }
+    it { should have_content('Inicio') }
+    it { should have_title(full_title('Inicio')) }
+    it { should_not have_title('Proyecto Piller Inicio') }
+
+    describe "for signed-in users" do
+      let(:usuario) { FactoryGirl.create(:usuario) }
+      before do
+        FactoryGirl.create(:microvideo, usuario: usuario, content: "http://www.youtube.com/watch?v=9nqr8BSvoz0")
+        FactoryGirl.create(:microvideo, usuario: usuario, content: "http://www.youtube.com/watch?v=xyzxyzxyzz0")
+        sign_in usuario
+        visit root_path
+      end
+
+      describe "follower/following counts" do
+        let(:other_user) { FactoryGirl.create(:usuario) }
+        before do
+          other_user.follow!(usuario)
+          visit root_path
+        end
+
+        it { should have_link("0 following", href: following_usuario_path(usuario)) }
+        it { should have_link("1 followers", href: followers_usuario_path(usuario)) }
+      end
+    end
   end
 
   describe "Help page" do
     before { visit help_path }
 
-    it { should have_content('Help') }
-    it { should have_title(full_title('Help')) }
+    it { should have_content('Pagina de ayuda') }
+    it { should have_title(full_title('Ayuda')) }
   end
 
   describe "About page" do
@@ -62,7 +83,7 @@ describe "Static pages" do
   describe "Contact page" do
     before { visit contact_path }
 
-    it { should have_content('Contact') }
-    it { should have_title(full_title('Contact')) }
+    it { should have_content('Contacta con PILLER') }
+    it { should have_title(full_title('Contacto')) }
   end
 end

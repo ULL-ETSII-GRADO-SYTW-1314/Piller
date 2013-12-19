@@ -2,17 +2,19 @@
 <div class="row">
   <aside class="span4">
     <section>
-      <h1>
+      <h3>
         <%= gravatar_for @usuario %>
         <%= @usuario.name %>
-      </h1>
+      </h3>
     </section>
 	  <section>
       <%= render 'shared/stats' %>
     </section>
-    <%= render 'follow_form' if signed_in? %>
+    <section>
+      <%= render 'follow_form' if signed_in? %>
+    </section>
   </aside>
-  <div class="span8">
+  <div class="span4">
     <% if @usuario.microvideos.any? %>
       <h3>Pillers (<%= @usuario.microvideos.count %>)</h3>
       <ol class="microposts">

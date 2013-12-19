@@ -1,6 +1,6 @@
 <li>
   <span class="content"><%= microvideo.titulo %></span>
-  <iframe width="620" height="300" src="http://www.youtube.com/embed/<%= microvideo.content.split('=').last %>" frameborder="0" allowfullscreen></iframe>
+  <iframe width="640" height="390" src="http://www.youtube.com/embed/<%= microvideo.content.split('=').last %>?end=60&version=3" frameborder="0" allowfullscreen></iframe>
   <span class="content"><%= microvideo.comentario %></span>
   <span class="timestamp">
     Publicado: <%= time_ago_in_words(microvideo.created_at) %> ago.

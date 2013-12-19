@@ -1,5 +1,5 @@
 <li id="<%= feed_item.id %>">
-  <%= link_to gravatar_for(feed_item.usuario), feed_item.usuario %>
+  <%= link_to gravatar_for(feed_item.usuario, size: 10), feed_item.usuario %>
   <span class="user">
     <%= link_to feed_item.usuario.name, feed_item.usuario %>
   </span>
