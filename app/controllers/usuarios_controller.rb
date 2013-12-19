@@ -18,7 +18,7 @@ class UsuariosController < ApplicationController
     @usuario = Usuario.new(user_params)    # Not the final implementation!
     if @usuario.save
       sign_in @usuario
-      flash[:success] = "Welcome to Piller!"
+      flash[:success] = "Bienvenido a Piller!"
       redirect_to @usuario
     else
       render 'new'
@@ -27,7 +27,7 @@ class UsuariosController < ApplicationController
 
   def destroy
     Usuario.find(params[:id]).destroy
-    flash[:success] = "Usuario destroyed."
+    flash[:success] = "Usuario Eliminado."
     redirect_to usuarios_path
   end
 
@@ -38,7 +38,7 @@ class UsuariosController < ApplicationController
   def update
     @usuario = Usuario.find(params[:id])
     if @usuario.update_attributes(user_params)
-      flash[:success] = "Profile updated"
+      flash[:success] = "Perfil actualizado"
       sign_in @usuario
       redirect_to @usuario
     else
@@ -51,14 +51,14 @@ class UsuariosController < ApplicationController
   end
 
   def following
-    @title = "Following"
+    @title = "Siguiendo"
     @usuario = Usuario.find(params[:id])
     @usuarios = @usuario.followed_users.paginate(page: params[:page])
     render 'show_follow'
   end
 
   def followers
-    @title = "Followers"
+    @title = "Seguidores"
     @usuario = Usuario.find(params[:id])
     @usuarios = @usuario.followers.paginate(page: params[:page])
     render 'show_follow'
@@ -73,7 +73,7 @@ class UsuariosController < ApplicationController
     # Before filters
 
     def signed_in_usuario
-      redirect_to signin_url, notice: "Please sign in." unless signed_in?
+      redirect_to signin_url, notice: "Por favor Accede a Piller" unless signed_in?
     end
     def correct_usuario
       @usuario = Usuario.find(params[:id])
