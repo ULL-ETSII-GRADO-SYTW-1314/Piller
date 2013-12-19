@@ -1,5 +1,5 @@
 Piller::Application.routes.draw do
-  resources :usuarios do
+  resources :users do
     member do
       get :following, :followers
     end

@@ -1,12 +1,13 @@
 class UsuariosController < ApplicationController
-  #before_action :signed_in_user, only: [:index, :edit, :update, :destroy]
+  #before_action :signed_in_user,
+  #              only: [:index, :edit, :update, :destroy, :following, :followers]
   #before_action :correct_user,   only: [:edit, :update]
   #before_action :admin_user,     only: :destroy
-
+  
   def new
   	@usuario = Usuario.new
   end
-
+  
   def show
     @usuario = Usuario.find(params[:id])
     @microvideos = @usuario.microvideos.paginate(page: params[:page])

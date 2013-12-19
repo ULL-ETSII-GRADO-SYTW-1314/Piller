@@ -26,7 +26,11 @@ body {
 
 section {
   overflow: auto;
-}
+} 
+
+.panel, .panel-heading, .panel-body, .form-group {
+    background-color: transparent;
+  }
 
 textarea {
   resize: vertical;
@@ -38,6 +42,16 @@ textarea {
   h1 {
     margin-bottom: 10px;
   }
+.container-full {
+  margin: 0 auto;
+  width: 100%;
+  min-height:100%;
+  background-color:#110022;
+  background-image:url(https://lh4.googleusercontent.com/hVUEqahG8CpqTY6BK4muKohoNZaVB_KUkUnI9ZEjJA=w1086-h611-no);
+  background-size: cover;
+  color:#eee;
+  overflow:hidden;
+  } 
 }
 
 /* typography */
@@ -51,16 +65,35 @@ h1 {
   letter-spacing: 2px;
   margin-bottom: 30px;
   text-align: center;
+  color: #3366FF;
+}
+h7 {
+  font-size: 4em;
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  text-align: center;
   color: #00BFFF;
 }
-
+h9 {
+  font-size: 6em;
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #3366FF;
+}
 h2 {
   font-size: 1.7em;
+  font-weight: bold;
+  line-height: 1;
   letter-spacing: -1px;
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: #C6C6C6;
+  color: #3399FF;
 }
 
 h6 {
@@ -92,12 +125,14 @@ h5 {
 p {
   font-size: 1.1em;
   line-height: 1.7em;
+  color: white;
 }
 
 
 /* header */
 
 #logo {
+
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
@@ -107,9 +142,22 @@ p {
   padding-top: 9px;
   font-weight: bold;
   line-height: 1;
+  font-color: white;
   &:hover {
     color: white;
     text-decoration: none;
+  }
+}
+.navbar {
+  .navbar-inner {
+    background-color: #3366FF;
+    background-image: none;
+    background-size: cover;
+    li {
+      font-weight: bold;
+      font-color: white;
+      text-decoration: none;
+    }
   }
 }
 
@@ -198,7 +246,7 @@ aside {
 }
 
 
-stats {
+.stats {
   overflow: auto;
   a {
     float: left;
