@@ -10,7 +10,7 @@
           <% if signed_in? %>
             <li><%= link_to "Usuarios", usuarios_path %></li>
                 <li><%= link_to "Perfil", current_usuario %></li>
-                <li><%=link_to "Configuración", edit_usuario_path(current_usuario) %></li>
+                <li><%=link_to "Configuracion", edit_usuario_path(current_usuario) %></li>
                 <li class="divider"></li>
                 <li>
                   <%= link_to "Salir", signout_path, method: "delete" %>

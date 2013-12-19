@@ -24607,3 +24607,1697 @@ Processing by UsuariosController#new as HTML
   Rendered layouts/_footer.html.erb (0.5ms)
 Completed 200 OK in 110ms (Views: 106.2ms | ActiveRecord: 2.5ms)
   [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+Started GET "/signin" for 127.0.0.1 at 2013-12-19 10:45:09 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (393.7ms)
+  Rendered layouts/_stylesheets.html.erb (40.8ms)
+  [1m[36mUsuario Load (0.4ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (197.7ms)
+  Rendered layouts/_footer.html.erb (1.4ms)
+Completed 200 OK in 1269ms (Views: 1264.8ms | ActiveRecord: 3.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Started GET "/signin" for 127.0.0.1 at 2013-12-19 10:45:10 +0000
+Processing by SessionsController#new as HTML
+  Rendered layouts/_stylesheets.html.erb (50.8ms)
+  [1m[35mUsuario Load (2.2ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (4.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 112ms (Views: 109.0ms | ActiveRecord: 2.2ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+Started GET "/signin" for 127.0.0.1 at 2013-12-19 10:45:10 +0000
+Processing by SessionsController#new as HTML
+  Rendered layouts/_stylesheets.html.erb (55.0ms)
+  [1m[36mUsuario Load (2.3ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (4.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 124ms (Views: 120.9ms | ActiveRecord: 2.3ms)
+Started POST "/sessions" for 127.0.0.1 at 2013-12-19 10:45:10 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[35mUsuario Load (0.5ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = '' LIMIT 1
+  Rendered layouts/_stylesheets.html.erb (50.7ms)
+  [1m[36mUsuario Load (0.3ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 111ms (Views: 108.0ms | ActiveRecord: 0.9ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Started GET "/signin" for 127.0.0.1 at 2013-12-19 10:45:10 +0000
+Processing by SessionsController#new as HTML
+  Rendered layouts/_stylesheets.html.erb (50.6ms)
+  [1m[35mUsuario Load (2.4ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (4.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 112ms (Views: 109.1ms | ActiveRecord: 2.4ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.5ms)[0m  SELECT 1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('person_1@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (75.6ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 19 Dec 2013 10:45:11 UTC +00:00], ["email", "person_1@example.com"], ["name", "Person 1"], ["password_digest", "$2a$04$1888NgmSsfALBbITfnO28O4EIE.ZAwsQUA1.wYC.l2qCIgIfh4JJa"], ["updated_at", Thu, 19 Dec 2013 10:45:11 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started POST "/sessions" for 127.0.0.1 at 2013-12-19 10:45:11 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"PERSON_1@EXAMPLE.COM", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = 'person_1@example.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `remember_token`
+  [1m[36mSQL (1.0ms)[0m  [1mUPDATE "usuarios" SET "remember_token" = ?, "updated_at" = ? WHERE "usuarios"."id" = 1[0m  [["remember_token", "ee4063d5622eea5fd7d6eda29b5cbc07d4bd4778"], ["updated_at", Thu, 19 Dec 2013 10:45:11 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/usuarios/1
+Completed 302 Found in 13ms (ActiveRecord: 1.5ms)
+Started GET "/usuarios/1" for 127.0.0.1 at 2013-12-19 10:45:11 +0000
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (0.4ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?  [["follower_id", 1]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  Rendered shared/_stats.html.erb (196.7ms)
+  [1m[35mUsuario Load (0.2ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'ee4063d5622eea5fd7d6eda29b5cbc07d4bd4778' LIMIT 1
+  Rendered usuarios/_follow_form.html.erb (1.3ms)
+  [1m[36mMicrovideo Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "microvideos" WHERE "microvideos"."usuario_id" = ? ORDER BY created_at DESC LIMIT 1[0m  [["usuario_id", 1]]
+  Rendered layouts/_stylesheets.html.erb (51.5ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 679ms (Views: 429.4ms | ActiveRecord: 3.1ms)
+  [1m[35m (4.9ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/signin" for 127.0.0.1 at 2013-12-19 10:45:12 +0000
+Processing by SessionsController#new as HTML
+  Rendered layouts/_stylesheets.html.erb (50.3ms)
+  [1m[35mUsuario Load (2.4ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (5.2ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 113ms (Views: 109.6ms | ActiveRecord: 2.4ms)
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.3ms)[0m  SELECT 1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('person_2@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (4.4ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 19 Dec 2013 10:45:12 UTC +00:00], ["email", "person_2@example.com"], ["name", "Person 2"], ["password_digest", "$2a$04$JnYPJTx7LY4SxxquvZBo1ebDW0nXNgS3mg5189cOxAoqETZa/M2gG"], ["updated_at", Thu, 19 Dec 2013 10:45:12 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started POST "/sessions" for 127.0.0.1 at 2013-12-19 10:45:12 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"PERSON_2@EXAMPLE.COM", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = 'person_2@example.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `remember_token`
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "usuarios" SET "remember_token" = ?, "updated_at" = ? WHERE "usuarios"."id" = 1[0m  [["remember_token", "9566ebd1aa7a1a757a8e158e76b837933dc2304e"], ["updated_at", Thu, 19 Dec 2013 10:45:12 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/usuarios/1
+Completed 302 Found in 9ms (ActiveRecord: 1.2ms)
+Started GET "/usuarios/1" for 127.0.0.1 at 2013-12-19 10:45:12 +0000
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (0.2ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?  [["follower_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  Rendered shared/_stats.html.erb (5.6ms)
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = '9566ebd1aa7a1a757a8e158e76b837933dc2304e' LIMIT 1
+  Rendered usuarios/_follow_form.html.erb (0.2ms)
+  [1m[36mMicrovideo Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "microvideos" WHERE "microvideos"."usuario_id" = ? ORDER BY created_at DESC LIMIT 1[0m  [["usuario_id", 1]]
+  Rendered layouts/_stylesheets.html.erb (51.5ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 121ms (Views: 116.9ms | ActiveRecord: 1.0ms)
+  [1m[35m (5.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Started GET "/signin" for 127.0.0.1 at 2013-12-19 10:45:12 +0000
+Processing by SessionsController#new as HTML
+  Rendered layouts/_stylesheets.html.erb (52.9ms)
+  [1m[35mUsuario Load (2.5ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (4.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 118ms (Views: 114.3ms | ActiveRecord: 2.5ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.2ms)[0m  SELECT 1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('person_3@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (4.4ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 19 Dec 2013 10:45:12 UTC +00:00], ["email", "person_3@example.com"], ["name", "Person 3"], ["password_digest", "$2a$04$eO.3GNy0l9k2As.nJL5kKe3VqiO7yxI71vRhsDeaXDMIcX27jGOxi"], ["updated_at", Thu, 19 Dec 2013 10:45:12 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started POST "/sessions" for 127.0.0.1 at 2013-12-19 10:45:12 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"PERSON_3@EXAMPLE.COM", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = 'person_3@example.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `remember_token`
+  [1m[36mSQL (0.8ms)[0m  [1mUPDATE "usuarios" SET "remember_token" = ?, "updated_at" = ? WHERE "usuarios"."id" = 1[0m  [["remember_token", "b74da58719d315d9cb70750a69ccc0268f60bbd8"], ["updated_at", Thu, 19 Dec 2013 10:45:12 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/usuarios/1
+Completed 302 Found in 8ms (ActiveRecord: 1.2ms)
+Started GET "/usuarios/1" for 127.0.0.1 at 2013-12-19 10:45:12 +0000
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (0.1ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?  [["follower_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  Rendered shared/_stats.html.erb (4.9ms)
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'b74da58719d315d9cb70750a69ccc0268f60bbd8' LIMIT 1
+  Rendered usuarios/_follow_form.html.erb (0.2ms)
+  [1m[36mMicrovideo Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "microvideos" WHERE "microvideos"."usuario_id" = ? ORDER BY created_at DESC LIMIT 1[0m  [["usuario_id", 1]]
+  Rendered layouts/_stylesheets.html.erb (52.2ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 120ms (Views: 117.0ms | ActiveRecord: 0.8ms)
+  [1m[35m (4.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/signin" for 127.0.0.1 at 2013-12-19 10:45:12 +0000
+Processing by SessionsController#new as HTML
+  Rendered layouts/_stylesheets.html.erb (51.9ms)
+  [1m[35mUsuario Load (2.5ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (4.9ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 114ms (Views: 110.5ms | ActiveRecord: 2.5ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.2ms)[0m  SELECT 1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('person_4@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (4.4ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 19 Dec 2013 10:45:12 UTC +00:00], ["email", "person_4@example.com"], ["name", "Person 4"], ["password_digest", "$2a$04$Q0uhm3JnmxvCXxTt9rarmeJRFi1f8ibwsOrT7Ft52Y2iSkpNWhNLG"], ["updated_at", Thu, 19 Dec 2013 10:45:12 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started POST "/sessions" for 127.0.0.1 at 2013-12-19 10:45:12 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"PERSON_4@EXAMPLE.COM", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = 'person_4@example.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `remember_token`
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "usuarios" SET "remember_token" = ?, "updated_at" = ? WHERE "usuarios"."id" = 1[0m  [["remember_token", "0d628ee65d172a9896cfee62b1b6d167b558e54c"], ["updated_at", Thu, 19 Dec 2013 10:45:12 UTC +00:00]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/usuarios/1
+Completed 302 Found in 9ms (ActiveRecord: 1.3ms)
+Started GET "/usuarios/1" for 127.0.0.1 at 2013-12-19 10:45:12 +0000
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (0.2ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?  [["follower_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  Rendered shared/_stats.html.erb (5.5ms)
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = '0d628ee65d172a9896cfee62b1b6d167b558e54c' LIMIT 1
+  Rendered usuarios/_follow_form.html.erb (0.2ms)
+  [1m[36mMicrovideo Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "microvideos" WHERE "microvideos"."usuario_id" = ? ORDER BY created_at DESC LIMIT 1[0m  [["usuario_id", 1]]
+  Rendered layouts/_stylesheets.html.erb (51.3ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 120ms (Views: 116.7ms | ActiveRecord: 0.8ms)
+  [1m[35m (3.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/signin" for 127.0.0.1 at 2013-12-19 10:45:12 +0000
+Processing by SessionsController#new as HTML
+  Rendered layouts/_stylesheets.html.erb (44.1ms)
+  [1m[35mUsuario Load (1.7ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (3.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 97ms (Views: 95.0ms | ActiveRecord: 1.7ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.2ms)[0m  SELECT 1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('person_5@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (3.2ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 19 Dec 2013 10:45:13 UTC +00:00], ["email", "person_5@example.com"], ["name", "Person 5"], ["password_digest", "$2a$04$eBzoO4hq1.mTIQLNK/qUwOGELQWCfaa.fC3fLMetGPyii4YInSVGm"], ["updated_at", Thu, 19 Dec 2013 10:45:13 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started POST "/sessions" for 127.0.0.1 at 2013-12-19 10:45:13 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"PERSON_5@EXAMPLE.COM", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = 'person_5@example.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `remember_token`
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "usuarios" SET "remember_token" = ?, "updated_at" = ? WHERE "usuarios"."id" = 1[0m  [["remember_token", "71eb19edfdc270b4b1a229185aebfd9cc6071fff"], ["updated_at", Thu, 19 Dec 2013 10:45:13 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/usuarios/1
+Completed 302 Found in 8ms (ActiveRecord: 1.0ms)
+Started GET "/usuarios/1" for 127.0.0.1 at 2013-12-19 10:45:13 +0000
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (0.2ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?  [["follower_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  Rendered shared/_stats.html.erb (5.1ms)
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = '71eb19edfdc270b4b1a229185aebfd9cc6071fff' LIMIT 1
+  Rendered usuarios/_follow_form.html.erb (0.2ms)
+  [1m[36mMicrovideo Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "microvideos" WHERE "microvideos"."usuario_id" = ? ORDER BY created_at DESC LIMIT 1[0m  [["usuario_id", 1]]
+  Rendered layouts/_stylesheets.html.erb (45.6ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 104ms (Views: 100.8ms | ActiveRecord: 0.8ms)
+  [1m[35m (5.3ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Started GET "/signin" for 127.0.0.1 at 2013-12-19 10:45:13 +0000
+Processing by SessionsController#new as HTML
+  Rendered layouts/_stylesheets.html.erb (40.4ms)
+  [1m[35mUsuario Load (2.0ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (4.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 96ms (Views: 93.3ms | ActiveRecord: 2.0ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.2ms)[0m  SELECT 1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('person_6@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (3.8ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 19 Dec 2013 10:45:13 UTC +00:00], ["email", "person_6@example.com"], ["name", "Person 6"], ["password_digest", "$2a$04$g7/ng1OhnkSA4.ZFwYHI8uF1IhyqRLD2nuyc7r5S5FGa.LKlCx3wS"], ["updated_at", Thu, 19 Dec 2013 10:45:13 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started POST "/sessions" for 127.0.0.1 at 2013-12-19 10:45:13 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"PERSON_6@EXAMPLE.COM", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = 'person_6@example.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `remember_token`
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "usuarios" SET "remember_token" = ?, "updated_at" = ? WHERE "usuarios"."id" = 1[0m  [["remember_token", "0e17759d51254eb6f0e6d8e29ffa26c3e0379b1c"], ["updated_at", Thu, 19 Dec 2013 10:45:13 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/usuarios/1
+Completed 302 Found in 9ms (ActiveRecord: 1.1ms)
+Started GET "/usuarios/1" for 127.0.0.1 at 2013-12-19 10:45:13 +0000
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (0.2ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?  [["follower_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  Rendered shared/_stats.html.erb (5.2ms)
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = '0e17759d51254eb6f0e6d8e29ffa26c3e0379b1c' LIMIT 1
+  Rendered usuarios/_follow_form.html.erb (0.3ms)
+  [1m[36mMicrovideo Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "microvideos" WHERE "microvideos"."usuario_id" = ? ORDER BY created_at DESC LIMIT 1[0m  [["usuario_id", 1]]
+  Rendered layouts/_stylesheets.html.erb (41.2ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 107ms (Views: 103.5ms | ActiveRecord: 0.8ms)
+  [1m[35m (6.0ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (2.0ms)[0m  [1mSELECT 1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('person_7@example.com') LIMIT 1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (4.2ms)[0m  INSERT INTO "usuarios" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Thu, 19 Dec 2013 10:45:13 UTC +00:00], ["email", "person_7@example.com"], ["name", "Person 7"], ["password_digest", "$2a$04$cGeD5KUNiV6vBLWGapp.COKD2LvC1NFzzs8w5u27CJRHkVmXBVHY2"], ["updated_at", Thu, 19 Dec 2013 10:45:13 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/usuarios/1" for 127.0.0.1 at 2013-12-19 10:45:13 +0000
+Processing by UsuariosController#update as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUsuario Load (0.1ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 400 Bad Request in 2ms
+  [1m[36m (2.9ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (3.7ms)[0m  SELECT 1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('person_8@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (3.6ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 19 Dec 2013 10:45:13 UTC +00:00], ["email", "person_8@example.com"], ["name", "Person 8"], ["password_digest", "$2a$04$rrr9AQUm6QPJhJIcu9dRkO2TmkKVN4j395V2arQmg0philTM8pqVK"], ["updated_at", Thu, 19 Dec 2013 10:45:13 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (3.9ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+Started POST "/relationships" for 127.0.0.1 at 2013-12-19 10:45:13 +0000
+Processing by RelationshipsController#create as HTML
+  [1m[36mUsuario Load (2.2ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+Redirected to http://www.example.com/signin
+Filter chain halted as :signed_in_user rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 2.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started DELETE "/relationships/1" for 127.0.0.1 at 2013-12-19 10:45:13 +0000
+Processing by RelationshipsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUsuario Load (1.8ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+Redirected to http://www.example.com/signin
+Filter chain halted as :signed_in_user rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 1.8ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (1.7ms)[0m  SELECT 1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('person_9@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (2.9ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 19 Dec 2013 10:45:13 UTC +00:00], ["email", "person_9@example.com"], ["name", "Person 9"], ["password_digest", "$2a$04$PHI9vtN648gxvozUkhAa..FOPYjQSY6XwMeWWS8UTrKOpzPcIxrcS"], ["updated_at", Thu, 19 Dec 2013 10:45:13 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/usuarios/1/edit" for 127.0.0.1 at 2013-12-19 10:45:13 +0000
+Processing by UsuariosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (0.1ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered shared/_error_messages.html.erb (1.2ms)
+  Rendered layouts/_stylesheets.html.erb (54.3ms)
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (2.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 169ms (Views: 166.0ms | ActiveRecord: 0.5ms)
+  [1m[36m (4.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (2.1ms)[0m  SELECT 1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('person_10@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (4.5ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 19 Dec 2013 10:45:13 UTC +00:00], ["email", "person_10@example.com"], ["name", "Person 10"], ["password_digest", "$2a$04$QF68TXmbTn1Of24BEM.Tc.OSGkRyj/35YfjKHxaZML.f/rbvcRLDG"], ["updated_at", Thu, 19 Dec 2013 10:45:13 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (4.5ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+Started GET "/signin" for 127.0.0.1 at 2013-12-19 10:48:58 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (391.4ms)
+  Rendered layouts/_stylesheets.html.erb (54.8ms)
+  [1m[36mUsuario Load (0.4ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (201.5ms)
+  Rendered layouts/_footer.html.erb (1.4ms)
+Completed 200 OK in 1288ms (Views: 1284.2ms | ActiveRecord: 2.7ms)
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('person_1@example.com') LIMIT 1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (69.8ms)[0m  INSERT INTO "usuarios" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Thu, 19 Dec 2013 10:49:00 UTC +00:00], ["email", "person_1@example.com"], ["name", "Person 1"], ["password_digest", "$2a$04$qUQjbdxULK12kL6zBEYFJOOvzxE7.2O5iv3EjXLiXTsCEPmrVDCmC"], ["updated_at", Thu, 19 Dec 2013 10:49:00 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/sessions" for 127.0.0.1 at 2013-12-19 10:49:00 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"PERSON_1@EXAMPLE.COM", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = 'person_1@example.com' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `remember_token`
+  [1m[35mSQL (1.1ms)[0m  UPDATE "usuarios" SET "remember_token" = ?, "updated_at" = ? WHERE "usuarios"."id" = 1  [["remember_token", "f854ed7c39222684063d7a81a7f7299fdb7a7086"], ["updated_at", Thu, 19 Dec 2013 10:49:00 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/usuarios/1
+Completed 302 Found in 13ms (ActiveRecord: 1.8ms)
+Started GET "/usuarios/1" for 127.0.0.1 at 2013-12-19 10:49:00 +0000
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUsuario Load (0.4ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?  [["followed_id", 1]]
+  Rendered shared/_stats.html.erb (202.9ms)
+  [1m[36mUsuario Load (0.3ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'f854ed7c39222684063d7a81a7f7299fdb7a7086' LIMIT 1[0m
+  Rendered usuarios/_follow_form.html.erb (1.0ms)
+  [1m[35mMicrovideo Exists (0.4ms)[0m  SELECT 1 AS one FROM "microvideos" WHERE "microvideos"."usuario_id" = ? ORDER BY created_at DESC LIMIT 1  [["usuario_id", 1]]
+  Rendered usuarios/show.html.erb within layouts/application (276.9ms)
+  Rendered layouts/_stylesheets.html.erb (49.0ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 689ms (Views: 436.6ms | ActiveRecord: 3.2ms)
+  [1m[36m (5.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+Started GET "/signin" for 127.0.0.1 at 2013-12-19 10:49:01 +0000
+Processing by SessionsController#new as HTML
+  Rendered layouts/_stylesheets.html.erb (56.9ms)
+  [1m[36mUsuario Load (2.3ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (4.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 119ms (Views: 116.1ms | ActiveRecord: 2.3ms)
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('person_2@example.com') LIMIT 1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (4.2ms)[0m  INSERT INTO "usuarios" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Thu, 19 Dec 2013 10:49:01 UTC +00:00], ["email", "person_2@example.com"], ["name", "Person 2"], ["password_digest", "$2a$04$hpFtQpqvZC38lN.qC0bsnOuViGsWk.OvujXAMXo7DWupstk1fKxB2"], ["updated_at", Thu, 19 Dec 2013 10:49:01 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/sessions" for 127.0.0.1 at 2013-12-19 10:49:01 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"PERSON_2@EXAMPLE.COM", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = 'person_2@example.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `remember_token`
+  [1m[35mSQL (0.7ms)[0m  UPDATE "usuarios" SET "remember_token" = ?, "updated_at" = ? WHERE "usuarios"."id" = 1  [["remember_token", "26906662bfc282d8deed82c09294e3ad9cfd4912"], ["updated_at", Thu, 19 Dec 2013 10:49:01 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/usuarios/1
+Completed 302 Found in 9ms (ActiveRecord: 1.2ms)
+Started GET "/usuarios/1" for 127.0.0.1 at 2013-12-19 10:49:01 +0000
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUsuario Load (0.2ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?  [["followed_id", 1]]
+  Rendered shared/_stats.html.erb (5.3ms)
+  [1m[36mUsuario Load (0.3ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = '26906662bfc282d8deed82c09294e3ad9cfd4912' LIMIT 1[0m
+  Rendered usuarios/_follow_form.html.erb (0.2ms)
+  [1m[35mMicrovideo Exists (0.1ms)[0m  SELECT 1 AS one FROM "microvideos" WHERE "microvideos"."usuario_id" = ? ORDER BY created_at DESC LIMIT 1  [["usuario_id", 1]]
+  Rendered layouts/_stylesheets.html.erb (54.6ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 123ms (Views: 119.3ms | ActiveRecord: 0.8ms)
+  [1m[36m (4.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/signin" for 127.0.0.1 at 2013-12-19 10:49:01 +0000
+Processing by SessionsController#new as HTML
+  Rendered layouts/_stylesheets.html.erb (49.6ms)
+  [1m[36mUsuario Load (2.1ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (4.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 108ms (Views: 105.4ms | ActiveRecord: 2.1ms)
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('person_3@example.com') LIMIT 1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (4.1ms)[0m  INSERT INTO "usuarios" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Thu, 19 Dec 2013 10:49:01 UTC +00:00], ["email", "person_3@example.com"], ["name", "Person 3"], ["password_digest", "$2a$04$7yNCXhnOX31uu9aeh9ICKebOxW7Xt9sopq5jg4Zt7IDHHuZAhphbi"], ["updated_at", Thu, 19 Dec 2013 10:49:01 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/sessions" for 127.0.0.1 at 2013-12-19 10:49:01 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"PERSON_3@EXAMPLE.COM", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = 'person_3@example.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `remember_token`
+  [1m[35mSQL (0.6ms)[0m  UPDATE "usuarios" SET "remember_token" = ?, "updated_at" = ? WHERE "usuarios"."id" = 1  [["remember_token", "27b978b0b3b3d07c7ca71af2418e69bc7e0420bb"], ["updated_at", Thu, 19 Dec 2013 10:49:01 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/usuarios/1
+Completed 302 Found in 8ms (ActiveRecord: 1.1ms)
+Started GET "/usuarios/1" for 127.0.0.1 at 2013-12-19 10:49:01 +0000
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUsuario Load (0.2ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?  [["followed_id", 1]]
+  Rendered shared/_stats.html.erb (5.5ms)
+  [1m[36mUsuario Load (0.3ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = '27b978b0b3b3d07c7ca71af2418e69bc7e0420bb' LIMIT 1[0m
+  Rendered usuarios/_follow_form.html.erb (0.2ms)
+  [1m[35mMicrovideo Exists (0.1ms)[0m  SELECT 1 AS one FROM "microvideos" WHERE "microvideos"."usuario_id" = ? ORDER BY created_at DESC LIMIT 1  [["usuario_id", 1]]
+  Rendered layouts/_stylesheets.html.erb (51.1ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 120ms (Views: 116.8ms | ActiveRecord: 0.9ms)
+  [1m[36m (4.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/signin" for 127.0.0.1 at 2013-12-19 10:49:01 +0000
+Processing by SessionsController#new as HTML
+  Rendered layouts/_stylesheets.html.erb (50.8ms)
+  [1m[36mUsuario Load (2.6ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (4.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 112ms (Views: 109.2ms | ActiveRecord: 2.6ms)
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('person_4@example.com') LIMIT 1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (4.4ms)[0m  INSERT INTO "usuarios" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Thu, 19 Dec 2013 10:49:01 UTC +00:00], ["email", "person_4@example.com"], ["name", "Person 4"], ["password_digest", "$2a$04$2cOsRRm82wPf1rEwZzwfB.w7//jTmeaSxsd0/Iee/cDvuRKbN0PDe"], ["updated_at", Thu, 19 Dec 2013 10:49:01 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/sessions" for 127.0.0.1 at 2013-12-19 10:49:01 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"PERSON_4@EXAMPLE.COM", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = 'person_4@example.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `remember_token`
+  [1m[35mSQL (0.7ms)[0m  UPDATE "usuarios" SET "remember_token" = ?, "updated_at" = ? WHERE "usuarios"."id" = 1  [["remember_token", "ceadc6107b00df71ca24f82e9826d3f33175bf47"], ["updated_at", Thu, 19 Dec 2013 10:49:01 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/usuarios/1
+Completed 302 Found in 9ms (ActiveRecord: 1.2ms)
+Started GET "/usuarios/1" for 127.0.0.1 at 2013-12-19 10:49:01 +0000
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUsuario Load (0.1ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?  [["followed_id", 1]]
+  Rendered shared/_stats.html.erb (5.0ms)
+  [1m[36mUsuario Load (0.3ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'ceadc6107b00df71ca24f82e9826d3f33175bf47' LIMIT 1[0m
+  Rendered usuarios/_follow_form.html.erb (0.2ms)
+  [1m[35mMicrovideo Exists (0.1ms)[0m  SELECT 1 AS one FROM "microvideos" WHERE "microvideos"."usuario_id" = ? ORDER BY created_at DESC LIMIT 1  [["usuario_id", 1]]
+  Rendered layouts/_stylesheets.html.erb (50.6ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 120ms (Views: 116.5ms | ActiveRecord: 0.8ms)
+  [1m[36m (5.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+Started GET "/signin" for 127.0.0.1 at 2013-12-19 10:49:01 +0000
+Processing by SessionsController#new as HTML
+  Rendered layouts/_stylesheets.html.erb (51.0ms)
+  [1m[36mUsuario Load (2.4ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (4.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 111ms (Views: 108.3ms | ActiveRecord: 2.4ms)
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('person_5@example.com') LIMIT 1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (4.5ms)[0m  INSERT INTO "usuarios" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Thu, 19 Dec 2013 10:49:02 UTC +00:00], ["email", "person_5@example.com"], ["name", "Person 5"], ["password_digest", "$2a$04$uRqe0qXIMaadXREnX7rOeuuZINHXmJct1odFY.G5Uk.HEgAoRB9n."], ["updated_at", Thu, 19 Dec 2013 10:49:02 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/sessions" for 127.0.0.1 at 2013-12-19 10:49:02 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"PERSON_5@EXAMPLE.COM", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[35mUsuario Load (1.1ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = 'person_5@example.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `remember_token`
+  [1m[35mSQL (0.6ms)[0m  UPDATE "usuarios" SET "remember_token" = ?, "updated_at" = ? WHERE "usuarios"."id" = 1  [["remember_token", "09232aa5685601f75471a20c4573a419e0df166e"], ["updated_at", Thu, 19 Dec 2013 10:49:02 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/usuarios/1
+Completed 302 Found in 9ms (ActiveRecord: 1.9ms)
+Started GET "/usuarios/1" for 127.0.0.1 at 2013-12-19 10:49:02 +0000
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?  [["followed_id", 1]]
+  Rendered shared/_stats.html.erb (5.1ms)
+  [1m[36mUsuario Load (0.3ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = '09232aa5685601f75471a20c4573a419e0df166e' LIMIT 1[0m
+  Rendered usuarios/_follow_form.html.erb (0.2ms)
+  [1m[35mMicrovideo Exists (0.1ms)[0m  SELECT 1 AS one FROM "microvideos" WHERE "microvideos"."usuario_id" = ? ORDER BY created_at DESC LIMIT 1  [["usuario_id", 1]]
+  Rendered layouts/_stylesheets.html.erb (54.0ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 123ms (Views: 118.8ms | ActiveRecord: 0.9ms)
+  [1m[36m (4.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+Started GET "/signin" for 127.0.0.1 at 2013-12-19 10:49:02 +0000
+Processing by SessionsController#new as HTML
+  Rendered layouts/_stylesheets.html.erb (52.6ms)
+  [1m[36mUsuario Load (2.2ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (4.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 113ms (Views: 109.9ms | ActiveRecord: 2.2ms)
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('person_6@example.com') LIMIT 1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (3.9ms)[0m  INSERT INTO "usuarios" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Thu, 19 Dec 2013 10:49:02 UTC +00:00], ["email", "person_6@example.com"], ["name", "Person 6"], ["password_digest", "$2a$04$EZ1xxpIscnQ1kmRFbwZCn.pNj7RGwCrGQa6t/WaLFAwC0lzM2HMgq"], ["updated_at", Thu, 19 Dec 2013 10:49:02 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/sessions" for 127.0.0.1 at 2013-12-19 10:49:02 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"PERSON_6@EXAMPLE.COM", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = 'person_6@example.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `remember_token`
+  [1m[35mSQL (0.7ms)[0m  UPDATE "usuarios" SET "remember_token" = ?, "updated_at" = ? WHERE "usuarios"."id" = 1  [["remember_token", "7097e21b4e77b35f435a3c6ce427711dd458f7cf"], ["updated_at", Thu, 19 Dec 2013 10:49:02 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/usuarios/1
+Completed 302 Found in 9ms (ActiveRecord: 1.2ms)
+Started GET "/usuarios/1" for 127.0.0.1 at 2013-12-19 10:49:02 +0000
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUsuario Load (0.2ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?  [["followed_id", 1]]
+  Rendered shared/_stats.html.erb (4.9ms)
+  [1m[36mUsuario Load (0.3ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = '7097e21b4e77b35f435a3c6ce427711dd458f7cf' LIMIT 1[0m
+  Rendered usuarios/_follow_form.html.erb (0.2ms)
+  [1m[35mMicrovideo Exists (0.1ms)[0m  SELECT 1 AS one FROM "microvideos" WHERE "microvideos"."usuario_id" = ? ORDER BY created_at DESC LIMIT 1  [["usuario_id", 1]]
+  Rendered layouts/_stylesheets.html.erb (53.2ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 122ms (Views: 118.5ms | ActiveRecord: 0.8ms)
+Started DELETE "/signout" for 127.0.0.1 at 2013-12-19 10:49:02 +0000
+Processing by SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2013-12-19 10:49:02 +0000
+Processing by StaticPagesController#home as HTML
+  [1m[36mUsuario Load (0.3ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_stylesheets.html.erb (50.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 174ms (Views: 170.7ms | ActiveRecord: 0.4ms)
+  [1m[35m (4.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/signin" for 127.0.0.1 at 2013-12-19 10:49:02 +0000
+Processing by SessionsController#new as HTML
+  Rendered layouts/_stylesheets.html.erb (51.4ms)
+  [1m[35mUsuario Load (2.2ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (4.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 110ms (Views: 107.4ms | ActiveRecord: 2.2ms)
+Started POST "/sessions" for 127.0.0.1 at 2013-12-19 10:49:02 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUsuario Load (0.2ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = '' LIMIT 1[0m
+  Rendered layouts/_stylesheets.html.erb (51.9ms)
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 112ms (Views: 110.4ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/signin" for 127.0.0.1 at 2013-12-19 10:49:02 +0000
+Processing by SessionsController#new as HTML
+  Rendered layouts/_stylesheets.html.erb (52.8ms)
+  [1m[36mUsuario Load (2.3ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (4.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 112ms (Views: 109.6ms | ActiveRecord: 2.3ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/signin" for 127.0.0.1 at 2013-12-19 10:49:03 +0000
+Processing by SessionsController#new as HTML
+  Rendered layouts/_stylesheets.html.erb (56.2ms)
+  [1m[35mUsuario Load (2.3ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (4.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 115ms (Views: 111.9ms | ActiveRecord: 2.3ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (2.1ms)[0m  SELECT 1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('person_7@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (4.0ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 19 Dec 2013 10:49:03 UTC +00:00], ["email", "person_7@example.com"], ["name", "Person 7"], ["password_digest", "$2a$04$nr40aVF6wzLjQKVhKD.1MOuyNKKr1iEWrlF3Ug8uh7N/KcvRuCOZK"], ["updated_at", Thu, 19 Dec 2013 10:49:03 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (4.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (2.0ms)[0m  SELECT 1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('person_8@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (3.4ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 19 Dec 2013 10:49:03 UTC +00:00], ["email", "person_8@example.com"], ["name", "Person 8"], ["password_digest", "$2a$04$.T.l/2foPVcr9JspdU/f9.Eh86ax9X5CgC7nGzOHnIZZbffriU6hG"], ["updated_at", Thu, 19 Dec 2013 10:49:03 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (4.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+Started DELETE "/relationships/1" for 127.0.0.1 at 2013-12-19 10:49:03 +0000
+Processing by RelationshipsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (1.7ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+Redirected to http://www.example.com/signin
+Filter chain halted as :signed_in_user rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 1.7ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started POST "/relationships" for 127.0.0.1 at 2013-12-19 10:49:03 +0000
+Processing by RelationshipsController#create as HTML
+  [1m[35mUsuario Load (2.4ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+Redirected to http://www.example.com/signin
+Filter chain halted as :signed_in_user rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 2.4ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (1.5ms)[0m  SELECT 1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('person_9@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (2.7ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 19 Dec 2013 10:49:03 UTC +00:00], ["email", "person_9@example.com"], ["name", "Person 9"], ["password_digest", "$2a$04$oyT.I9Pqsrola/Hwmv.pfeggZCdamZbMHnlF5rwV1tXZ50MU2n0HC"], ["updated_at", Thu, 19 Dec 2013 10:49:03 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/usuarios/1/edit" for 127.0.0.1 at 2013-12-19 10:49:03 +0000
+Processing by UsuariosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (0.1ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered shared/_error_messages.html.erb (0.9ms)
+  Rendered layouts/_stylesheets.html.erb (46.1ms)
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (2.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 143ms (Views: 141.1ms | ActiveRecord: 0.5ms)
+  [1m[36m (4.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.5ms)[0m  SELECT 1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('person_1@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (27.3ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 19 Dec 2013 10:51:03 UTC +00:00], ["email", "person_1@example.com"], ["name", "Person 1"], ["password_digest", "$2a$04$5Q9Mvd0i1P5pYyx5itSkNO8ULeBVhotH.HdkAS11G.Kd9EaZ/aK4y"], ["updated_at", Thu, 19 Dec 2013 10:51:03 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (4.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (2.2ms)[0m  SELECT 1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('person_2@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (4.4ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 19 Dec 2013 10:51:03 UTC +00:00], ["email", "person_2@example.com"], ["name", "Person 2"], ["password_digest", "$2a$04$EiYsUZSemMbjdt.BmyI2fuO5k/E0liPHmm867wM4E3dMJrBcE72Hq"], ["updated_at", Thu, 19 Dec 2013 10:51:03 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/usuarios/1/edit" for 127.0.0.1 at 2013-12-19 10:51:04 +0000
+Processing by UsuariosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (0.4ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered shared/_error_messages.html.erb (1.0ms)
+  Rendered layouts/_stylesheets.html.erb (52.2ms)
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (16.3ms)
+  Rendered layouts/_footer.html.erb (1.4ms)
+Completed 200 OK in 880ms (Views: 876.2ms | ActiveRecord: 0.7ms)
+  [1m[36m (4.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started POST "/relationships" for 127.0.0.1 at 2013-12-19 10:51:05 +0000
+Processing by RelationshipsController#create as HTML
+  [1m[36mUsuario Load (2.3ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+Redirected to http://www.example.com/signin
+Filter chain halted as :signed_in_user rendered or redirected
+Completed 302 Found in 6ms (ActiveRecord: 2.3ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Started DELETE "/relationships/1" for 127.0.0.1 at 2013-12-19 10:51:05 +0000
+Processing by RelationshipsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUsuario Load (2.3ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+Redirected to http://www.example.com/signin
+Filter chain halted as :signed_in_user rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 2.3ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (2.2ms)[0m  SELECT 1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('person_3@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (4.8ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 19 Dec 2013 10:51:05 UTC +00:00], ["email", "person_3@example.com"], ["name", "Person 3"], ["password_digest", "$2a$04$AKndQ0fOEFFCuklyUF514.rVJqjjZ.S5LPQeVGbuXPAJBQESPaAz6"], ["updated_at", Thu, 19 Dec 2013 10:51:05 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/1/followers" for 127.0.0.1 at 2013-12-19 10:51:05 +0000
+  [1m[36m (5.9ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (2.3ms)[0m  SELECT 1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('person_4@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (5.2ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 19 Dec 2013 10:51:05 UTC +00:00], ["email", "person_4@example.com"], ["name", "Person 4"], ["password_digest", "$2a$04$q5oZJ7WEj3UzPS4V9f9/zeT4TRy6g6Y5Ghe7CKtssmNYlcJkLN1/K"], ["updated_at", Thu, 19 Dec 2013 10:51:05 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (3.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (1.8ms)[0m  SELECT 1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('person_5@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (4.5ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 19 Dec 2013 10:51:05 UTC +00:00], ["email", "person_5@example.com"], ["name", "Person 5"], ["password_digest", "$2a$04$Fd5APZ4kiQ1LCSrEYqokgO5ZDBnSTbND6wGsZsgoQWaj3zJtneQMG"], ["updated_at", Thu, 19 Dec 2013 10:51:05 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/1/following" for 127.0.0.1 at 2013-12-19 10:51:05 +0000
+  [1m[36m (4.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+Started GET "/signin" for 127.0.0.1 at 2013-12-19 10:51:05 +0000
+Processing by SessionsController#new as HTML
+  Rendered layouts/_stylesheets.html.erb (51.1ms)
+  [1m[36mUsuario Load (2.4ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (4.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 472ms (Views: 468.8ms | ActiveRecord: 2.4ms)
+Started POST "/sessions" for 127.0.0.1 at 2013-12-19 10:51:05 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = '' LIMIT 1
+  Rendered layouts/_stylesheets.html.erb (51.0ms)
+  [1m[36mUsuario Load (0.3ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 110ms (Views: 107.6ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/signin" for 127.0.0.1 at 2013-12-19 10:51:05 +0000
+Processing by SessionsController#new as HTML
+  Rendered layouts/_stylesheets.html.erb (53.4ms)
+  [1m[35mUsuario Load (2.3ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (4.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 112ms (Views: 109.2ms | ActiveRecord: 2.3ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.2ms)[0m  SELECT 1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('person_6@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (4.2ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 19 Dec 2013 10:51:05 UTC +00:00], ["email", "person_6@example.com"], ["name", "Person 6"], ["password_digest", "$2a$04$EKKfAb9vzGbOJEIuEZTwEeZPKjEPhQjEVt9galQMIbePY3rhZynkm"], ["updated_at", Thu, 19 Dec 2013 10:51:05 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started POST "/sessions" for 127.0.0.1 at 2013-12-19 10:51:05 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"PERSON_6@EXAMPLE.COM", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = 'person_6@example.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `remember_token`
+  [1m[36mSQL (1.4ms)[0m  [1mUPDATE "usuarios" SET "remember_token" = ?, "updated_at" = ? WHERE "usuarios"."id" = 1[0m  [["remember_token", "5e2c671a4137ff3820099bfec58f66c72c50aa14"], ["updated_at", Thu, 19 Dec 2013 10:51:05 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/usuarios/1
+Completed 302 Found in 11ms (ActiveRecord: 1.9ms)
+Started GET "/usuarios/1" for 127.0.0.1 at 2013-12-19 10:51:06 +0000
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (0.2ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?  [["follower_id", 1]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  Rendered shared/_stats.html.erb (193.9ms)
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = '5e2c671a4137ff3820099bfec58f66c72c50aa14' LIMIT 1
+  Rendered usuarios/_follow_form.html.erb (1.4ms)
+  [1m[36mMicrovideo Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "microvideos" WHERE "microvideos"."usuario_id" = ? ORDER BY created_at DESC LIMIT 1[0m  [["usuario_id", 1]]
+  Rendered layouts/_stylesheets.html.erb (51.3ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 667ms (Views: 407.5ms | ActiveRecord: 3.1ms)
+  [1m[35m (5.6ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Started GET "/signin" for 127.0.0.1 at 2013-12-19 10:51:06 +0000
+Processing by SessionsController#new as HTML
+  Rendered layouts/_stylesheets.html.erb (50.8ms)
+  [1m[35mUsuario Load (2.5ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (4.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 111ms (Views: 108.2ms | ActiveRecord: 2.5ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.2ms)[0m  SELECT 1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('person_7@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (4.5ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 19 Dec 2013 10:51:06 UTC +00:00], ["email", "person_7@example.com"], ["name", "Person 7"], ["password_digest", "$2a$04$MvOVawj6jLQgkJNU6BwKTeHz8HVPKmY/8QsNflXnUppkGRJAj3UF6"], ["updated_at", Thu, 19 Dec 2013 10:51:06 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started POST "/sessions" for 127.0.0.1 at 2013-12-19 10:51:06 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"PERSON_7@EXAMPLE.COM", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = 'person_7@example.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `remember_token`
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "usuarios" SET "remember_token" = ?, "updated_at" = ? WHERE "usuarios"."id" = 1[0m  [["remember_token", "ae954c9452e954236c99baee5e7fefbf12aeaf49"], ["updated_at", Thu, 19 Dec 2013 10:51:06 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/usuarios/1
+Completed 302 Found in 8ms (ActiveRecord: 1.1ms)
+Started GET "/usuarios/1" for 127.0.0.1 at 2013-12-19 10:51:06 +0000
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (0.2ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?  [["follower_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  Rendered shared/_stats.html.erb (4.9ms)
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'ae954c9452e954236c99baee5e7fefbf12aeaf49' LIMIT 1
+  Rendered usuarios/_follow_form.html.erb (0.2ms)
+  [1m[36mMicrovideo Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "microvideos" WHERE "microvideos"."usuario_id" = ? ORDER BY created_at DESC LIMIT 1[0m  [["usuario_id", 1]]
+  Rendered layouts/_stylesheets.html.erb (50.7ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 120ms (Views: 116.1ms | ActiveRecord: 0.8ms)
+  [1m[35m (4.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/signin" for 127.0.0.1 at 2013-12-19 10:51:06 +0000
+Processing by SessionsController#new as HTML
+  Rendered layouts/_stylesheets.html.erb (51.1ms)
+  [1m[35mUsuario Load (2.4ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (4.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 106ms (Views: 102.8ms | ActiveRecord: 2.4ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.2ms)[0m  SELECT 1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('person_8@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (4.5ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 19 Dec 2013 10:51:07 UTC +00:00], ["email", "person_8@example.com"], ["name", "Person 8"], ["password_digest", "$2a$04$DX9mqlEOpfpNnMoKPhwPd.8mUMGCach4azoY9pHsMJAblAb1KHG0W"], ["updated_at", Thu, 19 Dec 2013 10:51:07 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started POST "/sessions" for 127.0.0.1 at 2013-12-19 10:51:07 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"PERSON_8@EXAMPLE.COM", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUsuario Load (0.4ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = 'person_8@example.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `remember_token`
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "usuarios" SET "remember_token" = ?, "updated_at" = ? WHERE "usuarios"."id" = 1[0m  [["remember_token", "24c73786e7407dab88a23c69107ada1f59b56a39"], ["updated_at", Thu, 19 Dec 2013 10:51:07 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/usuarios/1
+Completed 302 Found in 9ms (ActiveRecord: 1.3ms)
+Started GET "/usuarios/1" for 127.0.0.1 at 2013-12-19 10:51:07 +0000
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (0.2ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?  [["follower_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  Rendered shared/_stats.html.erb (5.2ms)
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = '24c73786e7407dab88a23c69107ada1f59b56a39' LIMIT 1
+  Rendered usuarios/_follow_form.html.erb (0.2ms)
+  [1m[36mMicrovideo Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "microvideos" WHERE "microvideos"."usuario_id" = ? ORDER BY created_at DESC LIMIT 1[0m  [["usuario_id", 1]]
+  Rendered layouts/_stylesheets.html.erb (35.8ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 107ms (Views: 102.7ms | ActiveRecord: 0.8ms)
+  [1m[35m (3.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/signin" for 127.0.0.1 at 2013-12-19 10:51:07 +0000
+Processing by SessionsController#new as HTML
+  Rendered layouts/_stylesheets.html.erb (43.3ms)
+  [1m[35mUsuario Load (1.8ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (4.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 95ms (Views: 92.3ms | ActiveRecord: 1.8ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.2ms)[0m  SELECT 1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('person_9@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (3.7ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 19 Dec 2013 10:51:07 UTC +00:00], ["email", "person_9@example.com"], ["name", "Person 9"], ["password_digest", "$2a$04$ZSDrLHbwAckM7nE5Rbvfz.yK.IieU9bWD5GDvPnrK14BJjSl39uyO"], ["updated_at", Thu, 19 Dec 2013 10:51:07 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started POST "/sessions" for 127.0.0.1 at 2013-12-19 10:51:07 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"PERSON_9@EXAMPLE.COM", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = 'person_9@example.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `remember_token`
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "usuarios" SET "remember_token" = ?, "updated_at" = ? WHERE "usuarios"."id" = 1[0m  [["remember_token", "27f3b69ab75d87e214ffa067aa732788967baddb"], ["updated_at", Thu, 19 Dec 2013 10:51:07 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/usuarios/1
+Completed 302 Found in 8ms (ActiveRecord: 1.1ms)
+Started GET "/usuarios/1" for 127.0.0.1 at 2013-12-19 10:51:07 +0000
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (0.1ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?  [["follower_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  Rendered shared/_stats.html.erb (5.3ms)
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = '27f3b69ab75d87e214ffa067aa732788967baddb' LIMIT 1
+  Rendered usuarios/_follow_form.html.erb (0.2ms)
+  [1m[36mMicrovideo Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "microvideos" WHERE "microvideos"."usuario_id" = ? ORDER BY created_at DESC LIMIT 1[0m  [["usuario_id", 1]]
+  Rendered layouts/_stylesheets.html.erb (41.8ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 107ms (Views: 102.3ms | ActiveRecord: 0.8ms)
+  [1m[35m (4.5ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Started GET "/signin" for 127.0.0.1 at 2013-12-19 10:51:07 +0000
+Processing by SessionsController#new as HTML
+  Rendered layouts/_stylesheets.html.erb (41.6ms)
+  [1m[35mUsuario Load (1.7ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (3.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 157ms (Views: 154.3ms | ActiveRecord: 1.7ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.2ms)[0m  SELECT 1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('person_10@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (4.0ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 19 Dec 2013 10:51:07 UTC +00:00], ["email", "person_10@example.com"], ["name", "Person 10"], ["password_digest", "$2a$04$rwNOiCXFLMBFeWdowIgQweOs0zDSW3XyoDKT/cKsWGPoqwgyf1FU6"], ["updated_at", Thu, 19 Dec 2013 10:51:07 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started POST "/sessions" for 127.0.0.1 at 2013-12-19 10:51:07 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"PERSON_10@EXAMPLE.COM", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = 'person_10@example.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `remember_token`
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "usuarios" SET "remember_token" = ?, "updated_at" = ? WHERE "usuarios"."id" = 1[0m  [["remember_token", "f31e961ccdf1c1cef08b4511cac6d106e40cc2a8"], ["updated_at", Thu, 19 Dec 2013 10:51:07 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/usuarios/1
+Completed 302 Found in 8ms (ActiveRecord: 1.1ms)
+Started GET "/usuarios/1" for 127.0.0.1 at 2013-12-19 10:51:07 +0000
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (0.1ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?  [["follower_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  Rendered shared/_stats.html.erb (5.1ms)
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'f31e961ccdf1c1cef08b4511cac6d106e40cc2a8' LIMIT 1
+  Rendered usuarios/_follow_form.html.erb (0.2ms)
+  [1m[36mMicrovideo Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "microvideos" WHERE "microvideos"."usuario_id" = ? ORDER BY created_at DESC LIMIT 1[0m  [["usuario_id", 1]]
+  Rendered layouts/_stylesheets.html.erb (47.2ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 106ms (Views: 102.9ms | ActiveRecord: 0.8ms)
+  [1m[35m (3.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/signin" for 127.0.0.1 at 2013-12-19 10:51:07 +0000
+Processing by SessionsController#new as HTML
+  Rendered layouts/_stylesheets.html.erb (37.7ms)
+  [1m[35mUsuario Load (1.8ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (4.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 91ms (Views: 88.3ms | ActiveRecord: 1.8ms)
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.2ms)[0m  SELECT 1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('person_11@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (3.4ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 19 Dec 2013 10:51:07 UTC +00:00], ["email", "person_11@example.com"], ["name", "Person 11"], ["password_digest", "$2a$04$Lrz9G8NEogA6jP..vDrIH.fc0iljd3TFHiYsftgkuooHitOmWEIkG"], ["updated_at", Thu, 19 Dec 2013 10:51:07 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started POST "/sessions" for 127.0.0.1 at 2013-12-19 10:51:07 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"PERSON_11@EXAMPLE.COM", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = 'person_11@example.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `remember_token`
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "usuarios" SET "remember_token" = ?, "updated_at" = ? WHERE "usuarios"."id" = 1[0m  [["remember_token", "7d51160120c2b186057b7cf7696be95bce762a72"], ["updated_at", Thu, 19 Dec 2013 10:51:07 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/usuarios/1
+Completed 302 Found in 9ms (ActiveRecord: 1.2ms)
+Started GET "/usuarios/1" for 127.0.0.1 at 2013-12-19 10:51:07 +0000
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (0.2ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?  [["follower_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  Rendered shared/_stats.html.erb (5.7ms)
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = '7d51160120c2b186057b7cf7696be95bce762a72' LIMIT 1
+  Rendered usuarios/_follow_form.html.erb (0.2ms)
+  [1m[36mMicrovideo Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "microvideos" WHERE "microvideos"."usuario_id" = ? ORDER BY created_at DESC LIMIT 1[0m  [["usuario_id", 1]]
+  Rendered layouts/_stylesheets.html.erb (37.3ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 95ms (Views: 91.4ms | ActiveRecord: 0.9ms)
+Started DELETE "/signout" for 127.0.0.1 at 2013-12-19 10:51:08 +0000
+Processing by SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2013-12-19 10:51:08 +0000
+Processing by StaticPagesController#home as HTML
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_stylesheets.html.erb (46.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 136ms (Views: 133.2ms | ActiveRecord: 0.4ms)
+  [1m[36m (3.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/signin" for 127.0.0.1 at 2013-12-19 10:51:08 +0000
+Processing by SessionsController#new as HTML
+  Rendered layouts/_stylesheets.html.erb (45.6ms)
+  [1m[36mUsuario Load (1.5ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (3.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 101ms (Views: 98.4ms | ActiveRecord: 1.5ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/signin" for 127.0.0.1 at 2013-12-19 10:51:08 +0000
+Processing by SessionsController#new as HTML
+  Rendered layouts/_stylesheets.html.erb (38.0ms)
+  [1m[35mUsuario Load (2.1ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (4.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 87ms (Views: 84.7ms | ActiveRecord: 2.1ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+Started DELETE "/relationships/1" for 127.0.0.1 at 2013-12-19 10:53:03 +0000
+Processing by RelationshipsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (0.4ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+Redirected to http://www.example.com/signin
+Filter chain halted as :signed_in_user rendered or redirected
+Completed 302 Found in 245ms (ActiveRecord: 2.9ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started POST "/relationships" for 127.0.0.1 at 2013-12-19 10:53:04 +0000
+Processing by RelationshipsController#create as HTML
+  [1m[35mUsuario Load (2.3ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+Redirected to http://www.example.com/signin
+Filter chain halted as :signed_in_user rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 2.3ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (2.7ms)[0m  SELECT 1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('person_1@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (29.0ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 19 Dec 2013 10:53:04 UTC +00:00], ["email", "person_1@example.com"], ["name", "Person 1"], ["password_digest", "$2a$04$1leFIKxPbAEBZrtaKcsR8uohgOpdB.EJSLz80SYBCtVy3dNuXsREy"], ["updated_at", Thu, 19 Dec 2013 10:53:04 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/1/following" for 127.0.0.1 at 2013-12-19 10:53:04 +0000
+  [1m[36m (4.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (2.2ms)[0m  SELECT 1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('person_2@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (4.4ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 19 Dec 2013 10:53:04 UTC +00:00], ["email", "person_2@example.com"], ["name", "Person 2"], ["password_digest", "$2a$04$17iL2IFAC336oE3Ri9/x.OXgFJAKKIobi2cPe5D5DoCGpHm40dzei"], ["updated_at", Thu, 19 Dec 2013 10:53:04 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/1/followers" for 127.0.0.1 at 2013-12-19 10:53:04 +0000
+  [1m[36m (4.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (2.3ms)[0m  SELECT 1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('person_3@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (4.4ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 19 Dec 2013 10:53:04 UTC +00:00], ["email", "person_3@example.com"], ["name", "Person 3"], ["password_digest", "$2a$04$.CbOBNEyKGnrzqVBXSDoW.mRcOlP1.wcxZaWK/MXkV23jyx8e5AkG"], ["updated_at", Thu, 19 Dec 2013 10:53:04 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/1/followers" for 127.0.0.1 at 2013-12-19 10:53:04 +0000
+  [1m[36m (4.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (2.1ms)[0m  SELECT 1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('person_4@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (4.5ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 19 Dec 2013 10:53:04 UTC +00:00], ["email", "person_4@example.com"], ["name", "Person 4"], ["password_digest", "$2a$04$nAr2HCuSYxWnsnB1yrAm5uBi6PiMg5kAITawCs3AFu9noXFzwdGAO"], ["updated_at", Thu, 19 Dec 2013 10:53:04 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/1/following" for 127.0.0.1 at 2013-12-19 10:53:04 +0000
+  [1m[36m (5.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (1.7ms)[0m  SELECT 1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('person_5@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (3.8ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 19 Dec 2013 10:53:04 UTC +00:00], ["email", "person_5@example.com"], ["name", "Person 5"], ["password_digest", "$2a$04$FvvDrQ0hGbp4m.adgmy9k.TONo5RQ32k75z.W7SpcHLCUs5PnYfE6"], ["updated_at", Thu, 19 Dec 2013 10:53:04 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/usuarios/1/edit" for 127.0.0.1 at 2013-12-19 10:53:04 +0000
+Processing by UsuariosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (0.6ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered shared/_error_messages.html.erb (1.3ms)
+  Rendered layouts/_stylesheets.html.erb (48.5ms)
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (4.3ms)
+  Rendered layouts/_footer.html.erb (1.4ms)
+Completed 200 OK in 827ms (Views: 822.7ms | ActiveRecord: 0.9ms)
+  [1m[36m (6.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/signin" for 127.0.0.1 at 2013-12-19 10:53:05 +0000
+Processing by SessionsController#new as HTML
+  Rendered layouts/_stylesheets.html.erb (51.1ms)
+  [1m[36mUsuario Load (2.3ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (4.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 458ms (Views: 454.6ms | ActiveRecord: 2.3ms)
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('person_6@example.com') LIMIT 1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (4.3ms)[0m  INSERT INTO "usuarios" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Thu, 19 Dec 2013 10:53:06 UTC +00:00], ["email", "person_6@example.com"], ["name", "Person 6"], ["password_digest", "$2a$04$sTMJjwCgbkDSjKg9XtOi.eArOcgRa8QMYar2v5JmwU1XBIkTW.NbO"], ["updated_at", Thu, 19 Dec 2013 10:53:06 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/sessions" for 127.0.0.1 at 2013-12-19 10:53:06 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"PERSON_6@EXAMPLE.COM", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = 'person_6@example.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `remember_token`
+  [1m[35mSQL (1.4ms)[0m  UPDATE "usuarios" SET "remember_token" = ?, "updated_at" = ? WHERE "usuarios"."id" = 1  [["remember_token", "700f2dc8e4903e0945a55d4a0bfb64e39ae3970c"], ["updated_at", Thu, 19 Dec 2013 10:53:06 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/usuarios/1
+Completed 302 Found in 11ms (ActiveRecord: 1.9ms)
+Started GET "/usuarios/1" for 127.0.0.1 at 2013-12-19 10:53:06 +0000
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUsuario Load (0.2ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?  [["followed_id", 1]]
+  Rendered shared/_stats.html.erb (200.5ms)
+  [1m[36mUsuario Load (0.2ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = '700f2dc8e4903e0945a55d4a0bfb64e39ae3970c' LIMIT 1[0m
+  Rendered usuarios/_follow_form.html.erb (1.1ms)
+  [1m[35mMicrovideo Exists (0.6ms)[0m  SELECT 1 AS one FROM "microvideos" WHERE "microvideos"."usuario_id" = ? ORDER BY created_at DESC LIMIT 1  [["usuario_id", 1]]
+  Rendered layouts/_stylesheets.html.erb (53.0ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 690ms (Views: 417.4ms | ActiveRecord: 3.3ms)
+  [1m[36m (4.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/signin" for 127.0.0.1 at 2013-12-19 10:53:06 +0000
+Processing by SessionsController#new as HTML
+  Rendered layouts/_stylesheets.html.erb (50.9ms)
+  [1m[36mUsuario Load (2.5ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (4.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 114ms (Views: 110.7ms | ActiveRecord: 2.5ms)
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('person_7@example.com') LIMIT 1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (4.4ms)[0m  INSERT INTO "usuarios" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Thu, 19 Dec 2013 10:53:06 UTC +00:00], ["email", "person_7@example.com"], ["name", "Person 7"], ["password_digest", "$2a$04$cb3mNXkVUjM0R391f2PuqO.wg7VDpzhSF94ClyxERaklVTmBIhC5."], ["updated_at", Thu, 19 Dec 2013 10:53:06 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/sessions" for 127.0.0.1 at 2013-12-19 10:53:06 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"PERSON_7@EXAMPLE.COM", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = 'person_7@example.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `remember_token`
+  [1m[35mSQL (0.6ms)[0m  UPDATE "usuarios" SET "remember_token" = ?, "updated_at" = ? WHERE "usuarios"."id" = 1  [["remember_token", "53f93ce22789e48a8974e50752d6aa1fa559a6e5"], ["updated_at", Thu, 19 Dec 2013 10:53:07 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/usuarios/1
+Completed 302 Found in 9ms (ActiveRecord: 1.1ms)
+Started GET "/usuarios/1" for 127.0.0.1 at 2013-12-19 10:53:07 +0000
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUsuario Load (0.1ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?  [["followed_id", 1]]
+  Rendered shared/_stats.html.erb (4.9ms)
+  [1m[36mUsuario Load (0.2ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = '53f93ce22789e48a8974e50752d6aa1fa559a6e5' LIMIT 1[0m
+  Rendered usuarios/_follow_form.html.erb (0.2ms)
+  [1m[35mMicrovideo Exists (0.1ms)[0m  SELECT 1 AS one FROM "microvideos" WHERE "microvideos"."usuario_id" = ? ORDER BY created_at DESC LIMIT 1  [["usuario_id", 1]]
+  Rendered layouts/_stylesheets.html.erb (51.2ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 119ms (Views: 115.2ms | ActiveRecord: 0.7ms)
+  [1m[36m (4.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+Started GET "/signin" for 127.0.0.1 at 2013-12-19 10:53:07 +0000
+Processing by SessionsController#new as HTML
+  Rendered layouts/_stylesheets.html.erb (54.0ms)
+  [1m[36mUsuario Load (2.3ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (4.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 117ms (Views: 114.7ms | ActiveRecord: 2.3ms)
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('person_8@example.com') LIMIT 1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (4.1ms)[0m  INSERT INTO "usuarios" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Thu, 19 Dec 2013 10:53:07 UTC +00:00], ["email", "person_8@example.com"], ["name", "Person 8"], ["password_digest", "$2a$04$eu9CPh/pRYv82HxhFwXh/uLQ8kjOwQ3ep6QTgkM6xO9p5QzU6BnVe"], ["updated_at", Thu, 19 Dec 2013 10:53:07 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/sessions" for 127.0.0.1 at 2013-12-19 10:53:07 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"PERSON_8@EXAMPLE.COM", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = 'person_8@example.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `remember_token`
+  [1m[35mSQL (0.6ms)[0m  UPDATE "usuarios" SET "remember_token" = ?, "updated_at" = ? WHERE "usuarios"."id" = 1  [["remember_token", "2fc78a88a594af20ab56a46a4a5c2db62f13d08e"], ["updated_at", Thu, 19 Dec 2013 10:53:07 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/usuarios/1
+Completed 302 Found in 8ms (ActiveRecord: 1.1ms)
+Started GET "/usuarios/1" for 127.0.0.1 at 2013-12-19 10:53:07 +0000
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUsuario Load (0.1ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?  [["followed_id", 1]]
+  Rendered shared/_stats.html.erb (4.8ms)
+  [1m[36mUsuario Load (0.3ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = '2fc78a88a594af20ab56a46a4a5c2db62f13d08e' LIMIT 1[0m
+  Rendered usuarios/_follow_form.html.erb (0.2ms)
+  [1m[35mMicrovideo Exists (0.1ms)[0m  SELECT 1 AS one FROM "microvideos" WHERE "microvideos"."usuario_id" = ? ORDER BY created_at DESC LIMIT 1  [["usuario_id", 1]]
+  Rendered layouts/_stylesheets.html.erb (51.0ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 119ms (Views: 115.6ms | ActiveRecord: 0.8ms)
+  [1m[36m (4.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/signin" for 127.0.0.1 at 2013-12-19 10:53:07 +0000
+Processing by SessionsController#new as HTML
+  Rendered layouts/_stylesheets.html.erb (50.9ms)
+  [1m[36mUsuario Load (2.5ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (4.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 109ms (Views: 106.2ms | ActiveRecord: 2.5ms)
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('person_9@example.com') LIMIT 1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (4.3ms)[0m  INSERT INTO "usuarios" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Thu, 19 Dec 2013 10:53:07 UTC +00:00], ["email", "person_9@example.com"], ["name", "Person 9"], ["password_digest", "$2a$04$5dT2syahZoFOhzUqfOogJ.LXqkPCBNRSwNJ.k2o4oqVve5dtH7FlC"], ["updated_at", Thu, 19 Dec 2013 10:53:07 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/sessions" for 127.0.0.1 at 2013-12-19 10:53:07 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"PERSON_9@EXAMPLE.COM", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = 'person_9@example.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `remember_token`
+  [1m[35mSQL (0.6ms)[0m  UPDATE "usuarios" SET "remember_token" = ?, "updated_at" = ? WHERE "usuarios"."id" = 1  [["remember_token", "5675fa5910ccafaff1a69da1a889117447e39fcf"], ["updated_at", Thu, 19 Dec 2013 10:53:07 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/usuarios/1
+Completed 302 Found in 10ms (ActiveRecord: 1.1ms)
+Started GET "/usuarios/1" for 127.0.0.1 at 2013-12-19 10:53:07 +0000
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUsuario Load (0.1ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?  [["followed_id", 1]]
+  Rendered shared/_stats.html.erb (5.1ms)
+  [1m[36mUsuario Load (0.3ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = '5675fa5910ccafaff1a69da1a889117447e39fcf' LIMIT 1[0m
+  Rendered usuarios/_follow_form.html.erb (0.2ms)
+  [1m[35mMicrovideo Exists (0.1ms)[0m  SELECT 1 AS one FROM "microvideos" WHERE "microvideos"."usuario_id" = ? ORDER BY created_at DESC LIMIT 1  [["usuario_id", 1]]
+  Rendered layouts/_stylesheets.html.erb (52.7ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 122ms (Views: 118.4ms | ActiveRecord: 0.8ms)
+  [1m[36m (4.9ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/signin" for 127.0.0.1 at 2013-12-19 10:53:07 +0000
+Processing by SessionsController#new as HTML
+  Rendered layouts/_stylesheets.html.erb (49.1ms)
+  [1m[36mUsuario Load (3.0ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (5.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 108ms (Views: 104.4ms | ActiveRecord: 3.0ms)
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('person_10@example.com') LIMIT 1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (4.3ms)[0m  INSERT INTO "usuarios" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Thu, 19 Dec 2013 10:53:07 UTC +00:00], ["email", "person_10@example.com"], ["name", "Person 10"], ["password_digest", "$2a$04$jC.XVDHve/tzxuvpC4oqHeQcVHgjjBQKA5bB8yCUUEM9gZPClrLY."], ["updated_at", Thu, 19 Dec 2013 10:53:07 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/sessions" for 127.0.0.1 at 2013-12-19 10:53:07 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"PERSON_10@EXAMPLE.COM", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = 'person_10@example.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `remember_token`
+  [1m[35mSQL (0.7ms)[0m  UPDATE "usuarios" SET "remember_token" = ?, "updated_at" = ? WHERE "usuarios"."id" = 1  [["remember_token", "1af37f9a4f2ac103f49f1fcac206a19fed4edf98"], ["updated_at", Thu, 19 Dec 2013 10:53:07 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/usuarios/1
+Completed 302 Found in 10ms (ActiveRecord: 1.3ms)
+Started GET "/usuarios/1" for 127.0.0.1 at 2013-12-19 10:53:07 +0000
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUsuario Load (0.2ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?  [["followed_id", 1]]
+  Rendered shared/_stats.html.erb (5.2ms)
+  [1m[36mUsuario Load (0.3ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = '1af37f9a4f2ac103f49f1fcac206a19fed4edf98' LIMIT 1[0m
+  Rendered usuarios/_follow_form.html.erb (0.2ms)
+  [1m[35mMicrovideo Exists (0.1ms)[0m  SELECT 1 AS one FROM "microvideos" WHERE "microvideos"."usuario_id" = ? ORDER BY created_at DESC LIMIT 1  [["usuario_id", 1]]
+  Rendered layouts/_stylesheets.html.erb (51.0ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 119ms (Views: 115.6ms | ActiveRecord: 0.8ms)
+  [1m[36m (4.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/signin" for 127.0.0.1 at 2013-12-19 10:53:08 +0000
+Processing by SessionsController#new as HTML
+  Rendered layouts/_stylesheets.html.erb (52.0ms)
+  [1m[36mUsuario Load (2.1ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (4.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 114ms (Views: 110.9ms | ActiveRecord: 2.1ms)
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('person_11@example.com') LIMIT 1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (4.4ms)[0m  INSERT INTO "usuarios" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Thu, 19 Dec 2013 10:53:08 UTC +00:00], ["email", "person_11@example.com"], ["name", "Person 11"], ["password_digest", "$2a$04$z8f.VYoiDwIqOttuobRfHe/iB0q5Ll0lXdci6nFul6QeJPY.2j11K"], ["updated_at", Thu, 19 Dec 2013 10:53:08 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/sessions" for 127.0.0.1 at 2013-12-19 10:53:08 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"PERSON_11@EXAMPLE.COM", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = 'person_11@example.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `remember_token`
+  [1m[35mSQL (0.6ms)[0m  UPDATE "usuarios" SET "remember_token" = ?, "updated_at" = ? WHERE "usuarios"."id" = 1  [["remember_token", "ffd407eec312573159f7fc2c8c2eb0bb84d5ac9d"], ["updated_at", Thu, 19 Dec 2013 10:53:08 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/usuarios/1
+Completed 302 Found in 8ms (ActiveRecord: 1.1ms)
+Started GET "/usuarios/1" for 127.0.0.1 at 2013-12-19 10:53:08 +0000
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUsuario Load (0.2ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?  [["followed_id", 1]]
+  Rendered shared/_stats.html.erb (5.1ms)
+  [1m[36mUsuario Load (0.3ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'ffd407eec312573159f7fc2c8c2eb0bb84d5ac9d' LIMIT 1[0m
+  Rendered usuarios/_follow_form.html.erb (0.2ms)
+  [1m[35mMicrovideo Exists (0.1ms)[0m  SELECT 1 AS one FROM "microvideos" WHERE "microvideos"."usuario_id" = ? ORDER BY created_at DESC LIMIT 1  [["usuario_id", 1]]
+  Rendered layouts/_stylesheets.html.erb (51.0ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 120ms (Views: 116.5ms | ActiveRecord: 0.8ms)
+Started DELETE "/signout" for 127.0.0.1 at 2013-12-19 10:53:08 +0000
+Processing by SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2013-12-19 10:53:08 +0000
+Processing by StaticPagesController#home as HTML
+  [1m[36mUsuario Load (0.3ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_stylesheets.html.erb (50.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 172ms (Views: 169.6ms | ActiveRecord: 0.4ms)
+  [1m[35m (4.5ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Started GET "/signin" for 127.0.0.1 at 2013-12-19 10:53:08 +0000
+Processing by SessionsController#new as HTML
+  Rendered layouts/_stylesheets.html.erb (50.9ms)
+  [1m[35mUsuario Load (2.4ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (4.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 112ms (Views: 108.7ms | ActiveRecord: 2.4ms)
+Started POST "/sessions" for 127.0.0.1 at 2013-12-19 10:53:08 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = '' LIMIT 1[0m
+  Rendered layouts/_stylesheets.html.erb (48.6ms)
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 108ms (Views: 106.4ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/signin" for 127.0.0.1 at 2013-12-19 10:53:08 +0000
+Processing by SessionsController#new as HTML
+  Rendered layouts/_stylesheets.html.erb (54.2ms)
+  [1m[36mUsuario Load (2.3ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (4.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 116ms (Views: 112.8ms | ActiveRecord: 2.3ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/signin" for 127.0.0.1 at 2013-12-19 10:53:08 +0000
+Processing by SessionsController#new as HTML
+  Rendered layouts/_stylesheets.html.erb (53.3ms)
+  [1m[35mUsuario Load (2.4ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (4.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 114ms (Views: 111.6ms | ActiveRecord: 2.4ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+Started GET "/signin" for 127.0.0.1 at 2013-12-19 10:54:17 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (392.3ms)
+  Rendered layouts/_stylesheets.html.erb (53.2ms)
+  [1m[36mUsuario Load (0.4ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (201.6ms)
+  Rendered layouts/_footer.html.erb (1.4ms)
+Completed 200 OK in 1334ms (Views: 1330.0ms | ActiveRecord: 3.3ms)
+Started POST "/sessions" for 127.0.0.1 at 2013-12-19 10:54:19 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[35mUsuario Load (0.4ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = '' LIMIT 1
+  Rendered sessions/new.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_stylesheets.html.erb (34.1ms)
+  [1m[36mUsuario Load (0.3ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 77ms (Views: 73.9ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+Started GET "/signin" for 127.0.0.1 at 2013-12-19 10:54:19 +0000
+Processing by SessionsController#new as HTML
+  Rendered layouts/_stylesheets.html.erb (40.7ms)
+  [1m[35mUsuario Load (2.0ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (4.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 93ms (Views: 90.2ms | ActiveRecord: 2.0ms)
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.7ms)[0m  SELECT 1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('person_1@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (76.5ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 19 Dec 2013 10:54:19 UTC +00:00], ["email", "person_1@example.com"], ["name", "Person 1"], ["password_digest", "$2a$04$0eGzuYD1UgVtSwhZkwanYOoiI13S7TUxw7aJAI2Ajkn7WM5p5SvwG"], ["updated_at", Thu, 19 Dec 2013 10:54:19 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started POST "/sessions" for 127.0.0.1 at 2013-12-19 10:54:19 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"PERSON_1@EXAMPLE.COM", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = 'person_1@example.com' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `remember_token`
+  [1m[36mSQL (1.3ms)[0m  [1mUPDATE "usuarios" SET "remember_token" = ?, "updated_at" = ? WHERE "usuarios"."id" = 1[0m  [["remember_token", "d07bb59a3baaed396b5b5efeed586fb56629eb9a"], ["updated_at", Thu, 19 Dec 2013 10:54:19 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/usuarios/1
+Completed 302 Found in 14ms (ActiveRecord: 2.1ms)
+Started GET "/usuarios/1" for 127.0.0.1 at 2013-12-19 10:54:19 +0000
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?  [["follower_id", 1]]
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  Rendered shared/_stats.html.erb (209.3ms)
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'd07bb59a3baaed396b5b5efeed586fb56629eb9a' LIMIT 1
+  Rendered usuarios/_follow_form.html.erb (1.4ms)
+  [1m[36mMicrovideo Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "microvideos" WHERE "microvideos"."usuario_id" = ? ORDER BY created_at DESC LIMIT 1[0m  [["usuario_id", 1]]
+  Rendered layouts/_stylesheets.html.erb (50.9ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 658ms (Views: 444.0ms | ActiveRecord: 3.3ms)
+  [1m[35m (4.9ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Started GET "/signin" for 127.0.0.1 at 2013-12-19 10:54:20 +0000
+Processing by SessionsController#new as HTML
+  Rendered layouts/_stylesheets.html.erb (49.2ms)
+  [1m[35mUsuario Load (2.2ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (4.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 108ms (Views: 105.3ms | ActiveRecord: 2.2ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.2ms)[0m  SELECT 1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('person_2@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (4.1ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 19 Dec 2013 10:54:20 UTC +00:00], ["email", "person_2@example.com"], ["name", "Person 2"], ["password_digest", "$2a$04$cdTHmegAYBZVz9MoWKgv8uA59kMSwlC2sIZulrKa8F5OTVTW7vPsG"], ["updated_at", Thu, 19 Dec 2013 10:54:20 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started POST "/sessions" for 127.0.0.1 at 2013-12-19 10:54:20 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"PERSON_2@EXAMPLE.COM", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = 'person_2@example.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `remember_token`
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "usuarios" SET "remember_token" = ?, "updated_at" = ? WHERE "usuarios"."id" = 1[0m  [["remember_token", "fc1e2d57c90ded535fd57c75ea22fc1e13903948"], ["updated_at", Thu, 19 Dec 2013 10:54:20 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/usuarios/1
+Completed 302 Found in 9ms (ActiveRecord: 1.2ms)
+Started GET "/usuarios/1" for 127.0.0.1 at 2013-12-19 10:54:20 +0000
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?  [["follower_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  Rendered shared/_stats.html.erb (6.5ms)
+  [1m[35mUsuario Load (0.4ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'fc1e2d57c90ded535fd57c75ea22fc1e13903948' LIMIT 1
+  Rendered usuarios/_follow_form.html.erb (0.3ms)
+  [1m[36mMicrovideo Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "microvideos" WHERE "microvideos"."usuario_id" = ? ORDER BY created_at DESC LIMIT 1[0m  [["usuario_id", 1]]
+  Rendered layouts/_stylesheets.html.erb (53.3ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 126ms (Views: 121.8ms | ActiveRecord: 1.3ms)
+  [1m[35m (4.7ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Started GET "/signin" for 127.0.0.1 at 2013-12-19 10:54:20 +0000
+Processing by SessionsController#new as HTML
+  Rendered layouts/_stylesheets.html.erb (43.3ms)
+  [1m[35mUsuario Load (1.8ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (3.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 97ms (Views: 94.4ms | ActiveRecord: 1.8ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT 1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('person_3@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (3.8ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 19 Dec 2013 10:54:20 UTC +00:00], ["email", "person_3@example.com"], ["name", "Person 3"], ["password_digest", "$2a$04$VwffoaciFXTiRgme0DlSzuzCchaaXwvOdt20df.IMcy4wQY6MXcFG"], ["updated_at", Thu, 19 Dec 2013 10:54:20 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started POST "/sessions" for 127.0.0.1 at 2013-12-19 10:54:20 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"PERSON_3@EXAMPLE.COM", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = 'person_3@example.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `remember_token`
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "usuarios" SET "remember_token" = ?, "updated_at" = ? WHERE "usuarios"."id" = 1[0m  [["remember_token", "18d4a816c3a4e5a0fb6a59ef18cc38723c7860dc"], ["updated_at", Thu, 19 Dec 2013 10:54:20 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/usuarios/1
+Completed 302 Found in 9ms (ActiveRecord: 1.1ms)
+Started GET "/usuarios/1" for 127.0.0.1 at 2013-12-19 10:54:20 +0000
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (0.2ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?  [["follower_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  Rendered shared/_stats.html.erb (5.9ms)
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = '18d4a816c3a4e5a0fb6a59ef18cc38723c7860dc' LIMIT 1
+  Rendered usuarios/_follow_form.html.erb (0.2ms)
+  [1m[36mMicrovideo Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "microvideos" WHERE "microvideos"."usuario_id" = ? ORDER BY created_at DESC LIMIT 1[0m  [["usuario_id", 1]]
+  Rendered layouts/_stylesheets.html.erb (44.3ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 112ms (Views: 108.5ms | ActiveRecord: 0.9ms)
+  [1m[35m (4.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Started GET "/signin" for 127.0.0.1 at 2013-12-19 10:54:21 +0000
+Processing by SessionsController#new as HTML
+  Rendered layouts/_stylesheets.html.erb (42.9ms)
+  [1m[35mUsuario Load (1.9ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (4.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 106ms (Views: 103.8ms | ActiveRecord: 1.9ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.2ms)[0m  SELECT 1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('person_4@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (3.3ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 19 Dec 2013 10:54:21 UTC +00:00], ["email", "person_4@example.com"], ["name", "Person 4"], ["password_digest", "$2a$04$0GwhNA2/OoCQ1xt2k8wRaOwmzOFvt/uwVXMOQMXVa79QX.EaQ7dxe"], ["updated_at", Thu, 19 Dec 2013 10:54:21 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started POST "/sessions" for 127.0.0.1 at 2013-12-19 10:54:21 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"PERSON_4@EXAMPLE.COM", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = 'person_4@example.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `remember_token`
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "usuarios" SET "remember_token" = ?, "updated_at" = ? WHERE "usuarios"."id" = 1[0m  [["remember_token", "a162abf548d631df67ba2ab4b275facfc80bbd23"], ["updated_at", Thu, 19 Dec 2013 10:54:21 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/usuarios/1
+Completed 302 Found in 8ms (ActiveRecord: 1.1ms)
+Started GET "/usuarios/1" for 127.0.0.1 at 2013-12-19 10:54:21 +0000
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (0.1ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?  [["follower_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  Rendered shared/_stats.html.erb (4.8ms)
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'a162abf548d631df67ba2ab4b275facfc80bbd23' LIMIT 1
+  Rendered usuarios/_follow_form.html.erb (0.2ms)
+  [1m[36mMicrovideo Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "microvideos" WHERE "microvideos"."usuario_id" = ? ORDER BY created_at DESC LIMIT 1[0m  [["usuario_id", 1]]
+  Rendered layouts/_stylesheets.html.erb (40.7ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 93ms (Views: 89.5ms | ActiveRecord: 0.8ms)
+  [1m[35m (4.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Started GET "/signin" for 127.0.0.1 at 2013-12-19 10:54:21 +0000
+Processing by SessionsController#new as HTML
+  Rendered layouts/_stylesheets.html.erb (50.2ms)
+  [1m[35mUsuario Load (2.5ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (4.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 105ms (Views: 102.1ms | ActiveRecord: 2.5ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.2ms)[0m  SELECT 1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('person_5@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (4.2ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 19 Dec 2013 10:54:21 UTC +00:00], ["email", "person_5@example.com"], ["name", "Person 5"], ["password_digest", "$2a$04$RoXP41cU.BTQKMNUxWWwFOHoqgoYgkJP8vIlLNz.0C9vsjq67EmpS"], ["updated_at", Thu, 19 Dec 2013 10:54:21 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started POST "/sessions" for 127.0.0.1 at 2013-12-19 10:54:21 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"PERSON_5@EXAMPLE.COM", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = 'person_5@example.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `remember_token`
+  [1m[36mSQL (0.8ms)[0m  [1mUPDATE "usuarios" SET "remember_token" = ?, "updated_at" = ? WHERE "usuarios"."id" = 1[0m  [["remember_token", "36c5aa78b9804c5323ec4ffc999009f74c9d7984"], ["updated_at", Thu, 19 Dec 2013 10:54:21 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/usuarios/1
+Completed 302 Found in 9ms (ActiveRecord: 1.3ms)
+Started GET "/usuarios/1" for 127.0.0.1 at 2013-12-19 10:54:21 +0000
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (0.2ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?  [["follower_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  Rendered shared/_stats.html.erb (5.1ms)
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = '36c5aa78b9804c5323ec4ffc999009f74c9d7984' LIMIT 1
+  Rendered usuarios/_follow_form.html.erb (0.2ms)
+  [1m[36mMicrovideo Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "microvideos" WHERE "microvideos"."usuario_id" = ? ORDER BY created_at DESC LIMIT 1[0m  [["usuario_id", 1]]
+  Rendered layouts/_stylesheets.html.erb (46.0ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 115ms (Views: 111.5ms | ActiveRecord: 0.8ms)
+  [1m[35m (2.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/signin" for 127.0.0.1 at 2013-12-19 10:54:21 +0000
+Processing by SessionsController#new as HTML
+  Rendered layouts/_stylesheets.html.erb (41.4ms)
+  [1m[35mUsuario Load (1.9ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (4.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 92ms (Views: 89.7ms | ActiveRecord: 1.9ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.2ms)[0m  SELECT 1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('person_6@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (3.8ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 19 Dec 2013 10:54:21 UTC +00:00], ["email", "person_6@example.com"], ["name", "Person 6"], ["password_digest", "$2a$04$89OkacRly86K6Afra9/FvO8b7bXIYHYqVDi1pjIm0vqF7z7N1lI3S"], ["updated_at", Thu, 19 Dec 2013 10:54:21 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started POST "/sessions" for 127.0.0.1 at 2013-12-19 10:54:21 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"email"=>"PERSON_6@EXAMPLE.COM", "password"=>"[FILTERED]"}, "commit"=>"Entrar"}
+  [1m[36mUsuario Load (0.3ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = 'person_6@example.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `remember_token`
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "usuarios" SET "remember_token" = ?, "updated_at" = ? WHERE "usuarios"."id" = 1[0m  [["remember_token", "830acc4ffaca8dd46bed10e32fa714bb87310add"], ["updated_at", Thu, 19 Dec 2013 10:54:21 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/usuarios/1
+Completed 302 Found in 8ms (ActiveRecord: 1.1ms)
+Started GET "/usuarios/1" for 127.0.0.1 at 2013-12-19 10:54:21 +0000
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (0.1ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?  [["follower_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "usuarios" INNER JOIN "relationships" ON "usuarios"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  Rendered shared/_stats.html.erb (4.9ms)
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = '830acc4ffaca8dd46bed10e32fa714bb87310add' LIMIT 1
+  Rendered usuarios/_follow_form.html.erb (0.2ms)
+  [1m[36mMicrovideo Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "microvideos" WHERE "microvideos"."usuario_id" = ? ORDER BY created_at DESC LIMIT 1[0m  [["usuario_id", 1]]
+  Rendered layouts/_stylesheets.html.erb (45.3ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 110ms (Views: 106.8ms | ActiveRecord: 0.8ms)
+Started DELETE "/signout" for 127.0.0.1 at 2013-12-19 10:54:21 +0000
+Processing by SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2013-12-19 10:54:21 +0000
+Processing by StaticPagesController#home as HTML
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_stylesheets.html.erb (52.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 177ms (Views: 173.6ms | ActiveRecord: 0.4ms)
+  [1m[36m (4.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/signin" for 127.0.0.1 at 2013-12-19 10:54:22 +0000
+Processing by SessionsController#new as HTML
+  Rendered layouts/_stylesheets.html.erb (53.5ms)
+  [1m[36mUsuario Load (2.1ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (4.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 113ms (Views: 110.0ms | ActiveRecord: 2.1ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Started GET "/signin" for 127.0.0.1 at 2013-12-19 10:54:22 +0000
+Processing by SessionsController#new as HTML
+  Rendered layouts/_stylesheets.html.erb (41.2ms)
+  [1m[35mUsuario Load (1.9ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (4.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 92ms (Views: 89.4ms | ActiveRecord: 1.9ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (1.7ms)[0m  SELECT 1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('person_7@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (3.9ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 19 Dec 2013 10:54:22 UTC +00:00], ["email", "person_7@example.com"], ["name", "Person 7"], ["password_digest", "$2a$04$CChCAdWtXRm5XS0/fYBrTeNYFve17NsckwruIlkvxdyYkZMzzED.u"], ["updated_at", Thu, 19 Dec 2013 10:54:22 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (3.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started POST "/relationships" for 127.0.0.1 at 2013-12-19 10:54:22 +0000
+Processing by RelationshipsController#create as HTML
+  [1m[36mUsuario Load (1.9ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+Redirected to http://www.example.com/signin
+Filter chain halted as :signed_in_user rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 1.9ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started DELETE "/relationships/1" for 127.0.0.1 at 2013-12-19 10:54:22 +0000
+Processing by RelationshipsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUsuario Load (1.6ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+Redirected to http://www.example.com/signin
+Filter chain halted as :signed_in_user rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 1.6ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (1.5ms)[0m  SELECT 1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('person_8@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (3.1ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 19 Dec 2013 10:54:22 UTC +00:00], ["email", "person_8@example.com"], ["name", "Person 8"], ["password_digest", "$2a$04$ogmma9qI71gB76TtvO.5pOY3NBfyThyI12SSavM5v4omaJo1VsRQ."], ["updated_at", Thu, 19 Dec 2013 10:54:22 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (4.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (2.8ms)[0m  SELECT 1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('person_9@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (3.6ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 19 Dec 2013 10:54:22 UTC +00:00], ["email", "person_9@example.com"], ["name", "Person 9"], ["password_digest", "$2a$04$iI3d5.05/ypMn6cyrYaS6eaMG0pwuksDt/LZ392oORWwtJGZ9aVRq"], ["updated_at", Thu, 19 Dec 2013 10:54:22 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (3.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (2.2ms)[0m  SELECT 1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('person_10@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (3.7ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 19 Dec 2013 10:54:22 UTC +00:00], ["email", "person_10@example.com"], ["name", "Person 10"], ["password_digest", "$2a$04$KJmY/vhuNuIzeovqLTO8X.nwtZBX9OZv4ltpoeqQ4XV7o2k0/qkyO"], ["updated_at", Thu, 19 Dec 2013 10:54:22 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (3.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (1.8ms)[0m  SELECT 1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('person_11@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (3.5ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Thu, 19 Dec 2013 10:54:22 UTC +00:00], ["email", "person_11@example.com"], ["name", "Person 11"], ["password_digest", "$2a$04$FdGiM.vX5Fyobye.PfIEXOI.aZzvs268CsvRh3Dt1b.B2BTd9ZMzO"], ["updated_at", Thu, 19 Dec 2013 10:54:22 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/usuarios/1/edit" for 127.0.0.1 at 2013-12-19 10:54:22 +0000
+Processing by UsuariosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (0.2ms)[0m  [1mSELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered shared/_error_messages.html.erb (1.3ms)
+  Rendered layouts/_stylesheets.html.erb (45.2ms)
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT "usuarios".* FROM "usuarios" WHERE "usuarios"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 160ms (Views: 158.0ms | ActiveRecord: 0.5ms)
+  [1m[36m (4.0ms)[0m  [1mrollback transaction[0m
