@@ -3,6 +3,7 @@ class UsuariosController < ApplicationController
   #               only: [:index, :edit, :update, :destroy, :following, :followers]
   #before_action :correct_usuario,   only: [:edit, :update]
   #before_action :admin_user,     only: :destroy
+
   
   def new
   	@usuario = Usuario.new
