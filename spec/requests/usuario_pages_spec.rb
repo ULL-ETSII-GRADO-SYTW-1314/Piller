@@ -101,8 +101,6 @@ describe "Usuario pages" do
         visit following_usuario_path(usuario)
       end
 
-      it { should have_title(full_title('Following')) }
-      it { should have_selector('h3', text: 'Following') }
       it { should have_link(other_usuario.name, href: usuario_path(other_usuario)) }
     end
 
@@ -112,8 +110,6 @@ describe "Usuario pages" do
         visit followers_usuario_path(other_usuario)
       end
 
-      it { should have_title(full_title('Followers')) }
-      it { should have_selector('h3', text: 'Followers') }
       it { should have_link(usuario.name, href: usuario_path(usuario)) }
     end
 
@@ -123,8 +119,6 @@ describe "Usuario pages" do
         visit followers_usuario_path(other_usuario)
       end
 
-      it { should have_title(full_title('Followers')) }
-      it { should have_selector('h3', text: 'Followers') }
       it { should have_link(usuario.name, href: usuario_path(usuario)) }
     end
 
