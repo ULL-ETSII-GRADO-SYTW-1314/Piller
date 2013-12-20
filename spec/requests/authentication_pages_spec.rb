@@ -63,16 +63,6 @@ describe "Authentication" do
             before { delete relationship_path(1) }
             specify { expect(response).to redirect_to(signin_path) }
           end
-        end
-
-        describe "visiting the following page" do
-          before { visit following_usuario_path(usuario) }
-          it { should have_title('Following') }
-        end
-
-        describe "visiting the followers page" do
-          before { visit followers_usuario_path(usuario) }
-          it { should have_title('Followers') }
         end       
       end
     end
